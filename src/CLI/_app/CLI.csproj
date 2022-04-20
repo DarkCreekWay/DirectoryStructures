@@ -10,7 +10,7 @@
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
-		<InternalsVisibleTo Include="fs.mstest"/>
+		<InternalsVisibleTo Include="fs.mstest" />
 	</ItemGroup>
 
 
