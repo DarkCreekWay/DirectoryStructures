@@ -1,4 +1,6 @@
-﻿namespace DarkCreekWay.FileStructures.CLI {
+﻿using System.Diagnostics;
+
+namespace DarkCreekWay.FileStructures.CLI {
 
     static class Program {
 
@@ -44,6 +46,14 @@
             // -> Add stats to unpooled version and pooled version for
             // verification of the intended reduction.
 
+            int maxStackSize = 0;
+
+            int filledQueueCount = 0;
+            int emptyQueueCount = 0;
+            int queueSizeSum = 0;
+            int maxQueueSize = 0;
+
+
             bool isRootPath = true;
 
             // current sub directory
@@ -61,16 +71,23 @@
 
                 if( false == isRootPath ) {
 
-                    Console.WriteLine( current.Substring( rootPath.Length + 1 ) );
+                    //Console.WriteLine( current.Substring( rootPath.Length + 1 ) );
 
                 }
                 else {
-                    Console.WriteLine( current );
+                    //Console.WriteLine( current );
                     isRootPath = false;
                 }
 
                 // Get sub directories from current as unvisited nodes.
                 queue = new Queue<string>( Directory.EnumerateDirectories( current ) );
+
+                if(queue.Count > 0) filledQueueCount++;
+                if(queue.Count == 0) emptyQueueCount++;
+
+                queueSizeSum += queue.Count;
+
+                if( queue.Count > maxQueueSize ) maxQueueSize = queue.Count;
 
                 // current has no child nodes
                 // find next unvisited node
@@ -93,9 +110,19 @@
                 // store remaining unvisited nodes on the stack.
                 if(queue.Count > 0) {
                     stack.Push( queue );
+                    if(stack.Count > maxStackSize) {
+                        maxStackSize = stack.Count;
+                    }
                 }
 
             } while( true );
+
+            Debug.WriteLine( $"Max. Stack Size    : {maxStackSize}" );
+            Debug.WriteLine( $"Filled Queue Count : {filledQueueCount}" );
+            Debug.WriteLine( $"Empty Queue Count  : {emptyQueueCount}" );
+            Debug.WriteLine( $"Queue Size (Sum)   : {queueSizeSum}" );
+            Debug.WriteLine( $"Queue Size (Avg)   : {(decimal)queueSizeSum / filledQueueCount}" );
+            Debug.WriteLine( $"Max. Queue Size    : {maxQueueSize}" );
         }
     }
 }
