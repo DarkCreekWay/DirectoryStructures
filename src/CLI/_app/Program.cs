@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿#define POOLING
 
 namespace DarkCreekWay.FileStructures.CLI {
 
@@ -19,8 +19,13 @@ namespace DarkCreekWay.FileStructures.CLI {
                 Capture( argv[1] );
 
             }
-
         }
+
+        const int s_StackSize = 8;
+#if POOLING
+        const int s_QueueSize = 32;
+        const int s_PoolSize  = 8;
+#endif
 
         static internal void Capture( string rootPath ) {
 
@@ -38,67 +43,75 @@ namespace DarkCreekWay.FileStructures.CLI {
             //     -> Eliminates the requirement to load or build the full tree first.
             //        -> Suitable to process large trees.
             // - Iterative processing
-
-            // Possible improvements:
+            //
+            // Improvements:
             //
             // Reduction of garbage collector preasure and memory usage
-            // through pooling of queue instances.
-            // -> Add stats to unpooled version and pooled version for
-            // verification of the intended reduction.
+            // through pooling of queue instances, which reduces queue object
+            // creations
 
-            int maxStackSize = 0;
+#if POOLING
 
-            int filledQueueCount = 0;
-            int emptyQueueCount = 0;
-            int queueSizeSum = 0;
-            int maxQueueSize = 0;
+            // Create pool of queue objects
+            Stack<Queue<string>> pool = new Stack<Queue<string>>( s_PoolSize );
 
-
-            bool isRootPath = true;
-
-            // current sub directory
-            string current = rootPath;
-
-            // queue of unvisited sibling nodes
-            Queue<string> queue;
+            for( int i = 0; i < s_PoolSize; i++ ) {
+                pool.Push( new Queue<string>( s_QueueSize ) );
+            }
+#endif
+            // Init tree traversal
+            string current = rootPath; // set current node to root node
+            bool isRoot = true;     // track special case of root node
 
             // stack of unvisited nodes
-            Stack<Queue<string>> stack = new Stack<Queue<string>>();
+            Stack<Queue<string>> stack = new Stack<Queue<string>>( s_StackSize );
 
+            // current queue of unvisited nodes (siblings)
+            Queue<string> queue;
+
+            // Traverse tree
             do {
 
                 // Visit current node
 
-                if( false == isRootPath ) {
+                if( false == isRoot ) {
 
                     //Console.WriteLine( current.Substring( rootPath.Length + 1 ) );
 
                 }
                 else {
                     //Console.WriteLine( current );
-                    isRootPath = false;
+                    isRoot = false;
                 }
 
-                // Get sub directories from current as unvisited nodes.
+                // Get and store child nodes of current node as unvisited nodes.
+#if POOLING
+                if( pool.Count != 0 ) {
+                    queue = pool.Pop();
+
+                    foreach( string path in Directory.EnumerateDirectories( current ) ) {
+                        queue.Enqueue( path );
+                    }
+                }
+                else {
+                    queue = new Queue<string>( Directory.EnumerateDirectories( current ) );
+                }
+#else
                 queue = new Queue<string>( Directory.EnumerateDirectories( current ) );
+#endif
 
-                if(queue.Count > 0) filledQueueCount++;
-                if(queue.Count == 0) emptyQueueCount++;
-
-                queueSizeSum += queue.Count;
-
-                if( queue.Count > maxQueueSize ) maxQueueSize = queue.Count;
-
-                // current has no child nodes
+                // current node has no child nodes
                 // find next unvisited node
-                if(queue.Count == 0) {
+                if( queue.Count == 0 ) {
 
                     // no more unvisited nodes on the stack.
                     // Tree traversal completed
-                    if(stack.Count == 0) {
+                    if( stack.Count == 0 ) {
                         break;
                     }
-
+#if POOLING
+                    pool.Push( queue );
+#endif
                     // Unvisited nodes on the stack.
                     // Continue tree traversal
                     queue = stack.Pop();
@@ -108,21 +121,15 @@ namespace DarkCreekWay.FileStructures.CLI {
                 current = queue.Dequeue();
 
                 // store remaining unvisited nodes on the stack.
-                if(queue.Count > 0) {
+                if( queue.Count > 0 ) {
                     stack.Push( queue );
-                    if(stack.Count > maxStackSize) {
-                        maxStackSize = stack.Count;
-                    }
                 }
-
+                else {
+#if POOLING
+                    pool.Push( queue );
+#endif
+                }
             } while( true );
-
-            Debug.WriteLine( $"Max. Stack Size    : {maxStackSize}" );
-            Debug.WriteLine( $"Filled Queue Count : {filledQueueCount}" );
-            Debug.WriteLine( $"Empty Queue Count  : {emptyQueueCount}" );
-            Debug.WriteLine( $"Queue Size (Sum)   : {queueSizeSum}" );
-            Debug.WriteLine( $"Queue Size (Avg)   : {(decimal)queueSizeSum / filledQueueCount}" );
-            Debug.WriteLine( $"Max. Queue Size    : {maxQueueSize}" );
         }
     }
 }
