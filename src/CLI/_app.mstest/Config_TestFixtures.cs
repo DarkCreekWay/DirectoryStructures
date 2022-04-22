@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Text;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -27,6 +28,24 @@ namespace DarkCreekWay.FileStructures.CLI {
             Debug.WriteLine( $"App User Config Base Path        (D) : {appUserConfigBasePath}" );
             Debug.WriteLine( $"Captured Structures Base Path    (D) : {capturedStructuresBasePath}" );
             Debug.WriteLine( $"Captured Structures Default Path (F) : {capturedStructuresDefaultPath}" );
+
+        }
+
+        [TestMethod]
+        public void WriteFileUsingTempFile() {
+
+            string tempFileName = Path.GetTempFileName();
+
+            using( FileStream fs = File.OpenWrite( tempFileName ) ) {
+
+                using( StreamWriter writer = new StreamWriter( fs , Encoding.Unicode) ) {
+                    writer.WriteLine( "Hello World" );
+                }
+            }
+
+            string targetFileName = Path.Combine( Environment.GetEnvironmentVariable( "temp" ), ".default" );
+            File.Move( tempFileName, targetFileName, true );
+            Assert.IsTrue( File.Exists( targetFileName ) );
 
         }
     }
