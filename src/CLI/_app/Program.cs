@@ -1,8 +1,16 @@
 ﻿#define POOLING
 
+using System.Text;
+
 namespace DarkCreekWay.FileStructures.CLI {
 
     static class Program {
+
+        static ConfigurationService s_ConfigurationService;
+
+        static Program() {
+            s_ConfigurationService = new ConfigurationService();
+        }
 
         public static void Main( string[] argv ) {
 
@@ -17,21 +25,41 @@ namespace DarkCreekWay.FileStructures.CLI {
                 }
 
                 Capture( argv[1] );
-
             }
         }
 
         const int s_StackSize = 8;
 #if POOLING
         const int s_QueueSize = 32;
-        const int s_PoolSize  = 8;
+        const int s_PoolSize = 8;
 #endif
 
         static internal void Capture( string rootPath ) {
 
+            string tempFileName = Path.GetTempFileName();
+
+            using( FileStream fs = File.OpenWrite( tempFileName ) ) {
+
+                using( StreamWriter writer = new StreamWriter( fs, Encoding.Unicode ) ) {
+                    Capture( rootPath, writer );
+                }
+            }
+
+            if(!Directory.Exists( s_ConfigurationService.CapturedStructuresBasePath)) {
+                _ = Directory.CreateDirectory( s_ConfigurationService.CapturedStructuresBasePath );
+            }
+
+            File.Move( tempFileName, s_ConfigurationService.CapturedStructuresDefaultPath, true );
+
+        }
+
+        static internal void Capture( string rootPath, TextWriter writer ) {
+
             if( false == Directory.Exists( rootPath ) ) {
                 Environment.Exit( 1 );
             }
+
+            int pathOffset = rootPath.Length + 1;
 
             // Pre-order tree traversal of n-ary tree
             //
@@ -77,6 +105,7 @@ namespace DarkCreekWay.FileStructures.CLI {
                 if( false == isRoot ) {
 
                     //Console.WriteLine( current.Substring( rootPath.Length + 1 ) );
+                    writer.WriteLine( current.AsSpan( pathOffset ) );
 
                 }
                 else {
