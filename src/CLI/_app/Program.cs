@@ -23,7 +23,7 @@ namespace DarkCreekWay.FileStructures.CLI {
 
             switch( command ) {
 
-                case "capture": {
+                case Constants.s_CaptureCommandName: {
 
                     if( argv.Length < 2 ) {
                         Environment.Exit( 1 );
@@ -33,7 +33,7 @@ namespace DarkCreekWay.FileStructures.CLI {
                     break;
                 }
 
-                case "apply": {
+                case Constants.s_ApplyCommandName: {
 
                     if( argv.Length < 2 ) {
                         Environment.Exit( 1 );
@@ -43,13 +43,15 @@ namespace DarkCreekWay.FileStructures.CLI {
                     break;
                 }
 
-                case "register": {
+                case Constants.s_RegisterCommandName: {
+
                     s_IntegrationService.Register();
                     Environment.Exit( 0 );
                     break;
                 }
 
-                case "unregister": {
+                case Constants.s_UnregisterCommandName: {
+
                     s_IntegrationService.Unregister();
                     Environment.Exit( 0 );
                     break;
