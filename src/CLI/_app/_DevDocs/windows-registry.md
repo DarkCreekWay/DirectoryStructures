@@ -11,6 +11,7 @@ for directories.
 Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\DarkCreekWay.FolderStructures]
+"MultiSelectModel"="Single"
 "MUIVerb"="DCW Folder Structure"
 "ExtendedSubCommandsKey"="Directory\\shell\\DarkCreekWay.FolderStructures"
 @=""
