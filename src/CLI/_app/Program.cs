@@ -7,9 +7,10 @@ namespace DarkCreekWay.FileStructures.CLI {
     static class Program {
 
         static ConfigurationService s_ConfigurationService;
-
+        static MicrosoftWindowsIntegrationService s_IntegrationService;
         static Program() {
             s_ConfigurationService = new ConfigurationService();
+            s_IntegrationService   = new MicrosoftWindowsIntegrationService();
         }
 
         public static void Main( string[] argv ) {
@@ -18,22 +19,48 @@ namespace DarkCreekWay.FileStructures.CLI {
                 Environment.Exit( 1 );
             }
 
-            if( argv[0].ToLowerInvariant() == "capture" ) {
+            string command = argv[0].ToLowerInvariant();
 
-                if( argv.Length < 2 ) {
-                    Environment.Exit( 1 );
+            switch( command ) {
+
+                case "capture": {
+
+                    if( argv.Length < 2 ) {
+                        Environment.Exit( 1 );
+                    }
+
+                    Capture( argv[1] );
+                    break;
                 }
 
-                Capture( argv[1] );
-            }
+                case "apply": {
 
-            if( argv[0].ToLowerInvariant() == "apply") {
-                if( argv.Length < 2) {
-                    Environment.Exit( 1 );
+                    if( argv.Length < 2 ) {
+                        Environment.Exit( 1 );
+                    }
+
+                    Apply( argv[1] );
+                    break;
                 }
 
-                Apply( argv[1] );
+                case "register": {
+                    s_IntegrationService.Register();
+                    Environment.Exit( 0 );
+                    break;
+                }
+
+                case "unregister": {
+                    s_IntegrationService.Unregister();
+                    Environment.Exit( 0 );
+                    break;
+                }
+
+                default:
+                    Environment.Exit( 1 );
+                    break;
             }
+
+            Environment.Exit( 0 );
         }
 
         static internal void Apply( string basePath ) {
@@ -42,7 +69,7 @@ namespace DarkCreekWay.FileStructures.CLI {
                 Environment.Exit( 1 );
             }
 
-            if(false == File.Exists( s_ConfigurationService.CapturedStructuresDefaultPath ) ) {
+            if( false == File.Exists( s_ConfigurationService.CapturedStructuresDefaultPath ) ) {
                 Environment.Exit( 1 );
             }
 
@@ -50,9 +77,9 @@ namespace DarkCreekWay.FileStructures.CLI {
 
             using( FileStream fs = File.OpenRead( s_ConfigurationService.CapturedStructuresDefaultPath ) ) {
 
-                using( StreamReader reader = new StreamReader( fs )) {
+                using( StreamReader reader = new StreamReader( fs ) ) {
 
-                    while(!reader.EndOfStream ) {
+                    while( !reader.EndOfStream ) {
                         ReadOnlySpan<char> path = reader.ReadLine().AsSpan();
                         _ = Directory.CreateDirectory( string.Concat( normalizedBasePath, path ) );
                     }
@@ -77,7 +104,7 @@ namespace DarkCreekWay.FileStructures.CLI {
                 }
             }
 
-            if(!Directory.Exists( s_ConfigurationService.CapturedStructuresBasePath)) {
+            if( !Directory.Exists( s_ConfigurationService.CapturedStructuresBasePath ) ) {
                 _ = Directory.CreateDirectory( s_ConfigurationService.CapturedStructuresBasePath );
             }
 
