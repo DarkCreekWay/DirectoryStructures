@@ -26,6 +26,40 @@ namespace DarkCreekWay.FileStructures.CLI {
 
                 Capture( argv[1] );
             }
+
+            if( argv[0].ToLowerInvariant() == "apply") {
+                if( argv.Length < 2) {
+                    Environment.Exit( 1 );
+                }
+
+                Apply( argv[1] );
+            }
+        }
+
+        static internal void Apply( string basePath ) {
+
+            if( false == Directory.Exists( basePath ) ) {
+                Environment.Exit( 1 );
+            }
+
+            if(false == File.Exists( s_ConfigurationService.CapturedStructuresDefaultPath ) ) {
+                Environment.Exit( 1 );
+            }
+
+            ReadOnlySpan<char> normalizedBasePath = string.Concat( basePath.AsSpan(), Path.DirectorySeparatorChar.ToString().AsSpan() );
+
+            using( FileStream fs = File.OpenRead( s_ConfigurationService.CapturedStructuresDefaultPath ) ) {
+
+                using( StreamReader reader = new StreamReader( fs )) {
+
+                    while(!reader.EndOfStream ) {
+                        ReadOnlySpan<char> path = reader.ReadLine().AsSpan();
+                        Directory.CreateDirectory( string.Concat( normalizedBasePath, path ) );
+                    }
+
+                }
+            }
+
         }
 
         const int s_StackSize = 8;
