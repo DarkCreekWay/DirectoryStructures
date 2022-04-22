@@ -11,11 +11,10 @@ namespace DarkCreekWay.FileStructures.CLI {
         public void Apply_TDD() {
 
             string targetPath = "c:\\temp\\FSTestTarget";
-            Directory.CreateDirectory( targetPath );
+            _ = Directory.CreateDirectory( targetPath );
 
             Program.Apply( targetPath );
 
         }
-
     }
 }

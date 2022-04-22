@@ -54,12 +54,10 @@ namespace DarkCreekWay.FileStructures.CLI {
 
                     while(!reader.EndOfStream ) {
                         ReadOnlySpan<char> path = reader.ReadLine().AsSpan();
-                        Directory.CreateDirectory( string.Concat( normalizedBasePath, path ) );
+                        _ = Directory.CreateDirectory( string.Concat( normalizedBasePath, path ) );
                     }
-
                 }
             }
-
         }
 
         const int s_StackSize = 8;
