@@ -25,13 +25,13 @@ persisted.
       * capture
   * Example invocation
     * fs.exe capture "c:\users\SampleUser\My template directory\"
-  * Build a flat list of sub-directories for a given path
-  * The list has to cover the full sub directory hierarchy (Recurse tree)
-  * Define directory structure underneath %localappdata% for persistence.
-  * Store flat list as text file underneath defined directory structure.
-    * The file needs to be able to store Unicode pathes.
-* Integrate application into the Windows Explorer Context Menu for directories
+  * [x] Build a flat list of sub-directories for a given path
+  * [x] The list has to cover the full sub directory hierarchy (Recurse tree)
+  * [x] Define directory structure underneath %localappdata% for persistence.
+  * [x] Store flat list as text file underneath defined directory structure.
+    * [x] The file needs to be able to store Unicode pathes.
+* [x] Integrate application into the Windows Explorer Context Menu for directories
   User specific integration (reduces permission and UAC trouble)
-  * Find correct registry keys
-  * Add Registry key based invocation manually
+  * [x] Find correct registry keys
+  * [x] Add Registry key based invocation manually
     * Invocation will look like something like : \<app\>.exe capture "%0"
