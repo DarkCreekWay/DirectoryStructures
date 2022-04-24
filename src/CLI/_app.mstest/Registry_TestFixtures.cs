@@ -24,7 +24,6 @@ namespace DarkCreekWay.FileStructures.CLI {
                             using( RegistryKey applyCommand = apply.CreateSubKey( "command", true ) ) {
                                 applyCommand.SetValue( "", "p:\\FileStructures\\src\\CLI\\_app\\bin\\Debug\\net6.0\\fs.exe apply \"%1\"", RegistryValueKind.String );
                             }
-
                         }
 
                         using( RegistryKey capture = verb.CreateSubKey( "shell\\Capture", true ) ) {
