@@ -30,5 +30,5 @@ By this, the user can apply a captured structure multiple times.
       * apply
   * Example invocation
     * fs.exe apply "c:\users\SampleUser\My target directory\"
-  * [ ] Get captured directory structure from persisted file.
-  * [ ] Create directory structure underneath provided path.
+  * [x] Get captured directory structure from persisted file.
+  * [x] Create directory structure underneath provided path.

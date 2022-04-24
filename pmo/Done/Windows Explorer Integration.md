@@ -2,7 +2,7 @@
 
 The user wants to use the tool on a new machine.
 
-In order to make integrate the tool into Windows Explorer, the tool should offer
+In order to integrate the tool into Windows Explorer, the tool should offer
 sub commands for registering and unregistering.
 
 ## Registration
@@ -31,9 +31,9 @@ The relevant registry keys are deleted.
 
 ## Breakdown
 
-* Implement "register" sub command
-  * Get current location of app
-  * Create registry keys and values
-    * Set pathes for invocation of app to current location of app
-* Implement "unregister sub command
-  * Delete registry keys
+* [x] Implement "register" sub command
+  * [x] Get current location of app
+  * [x] Create registry keys and values
+    * [x] Set pathes for invocation of app to current location of app
+* [x] Implement "unregister sub command
+  * [x] Delete registry keys
