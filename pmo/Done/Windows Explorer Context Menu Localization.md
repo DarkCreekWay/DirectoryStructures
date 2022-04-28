@@ -16,7 +16,7 @@ Windows Explorer Integration
 
 ## Breakdown
 
-* [ ] Replace static labels with values provided by ResourceManager
-* [ ] Add Resources for locale EN
-* [ ] Add Resources for locale DE
-* [ ] Set app neutral language to EN
+* [x] Replace static labels with values provided by ResourceManager
+* [x] Add Resources for locale EN
+* [x] Add Resources for locale DE
+* [x] Set app neutral language to EN

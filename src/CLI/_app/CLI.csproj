@@ -7,10 +7,21 @@
 		<Nullable>enable</Nullable>
 		<RootNamespace>DarkCreekWay.FileStructures.CLI</RootNamespace>
 		<AssemblyName>fs</AssemblyName>
+		<NeutralLanguage>en</NeutralLanguage>
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
 		<InternalsVisibleTo Include="fs.mstest" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="L10n\Resources.resx">
+	    <Generator></Generator>
+	  </EmbeddedResource>
 	</ItemGroup>
 
 
