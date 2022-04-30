@@ -3,6 +3,10 @@
     "CLI": {
       "commandName": "Project",
       "commandLineArgs": "capture %localappdata%\\temp"
+    },
+    "CLI -help": {
+      "commandName": "Project",
+      "commandLineArgs": "--help"
     }
   }
 }

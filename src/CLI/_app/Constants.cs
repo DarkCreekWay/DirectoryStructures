@@ -11,5 +11,14 @@
         public const string s_CaptureCommandName    = "capture";
         public const string s_ApplyCommandName      = "apply";
 
+        public const string s_HelpCommandName        = "help";
+        public const string s_HelpLongOption         = "--help";
+        public const string s_HelpLongQMarkOption    = "--?";
+        public const string s_HelpShortOption        = "-h";
+        public const string s_HelpShortQMarkOption   = "-?";
+        public const string s_HelpLongWindowsOption  = "/help";
+        public const string s_HelpQMarkWindowsOption = "/?";
+        public const string s_HelpShortWindowsOption = "/h";
+
     }
 }

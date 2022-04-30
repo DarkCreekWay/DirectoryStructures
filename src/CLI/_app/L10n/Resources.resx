@@ -126,4 +126,8 @@
   <data name="ContextMenu.Text" xml:space="preserve">
     <value>Directory Structures</value>
   </data>
+  <data name="Help.Text" xml:space="preserve">
+    <value>This is a multiline
+help text.</value>
+  </data>
 </root>
