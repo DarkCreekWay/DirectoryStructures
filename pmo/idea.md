@@ -1,4 +1,4 @@
-# FileStructures - the idea
+# DirectoryStructures - the idea
 
 People often have the intention to strucure their life for various reasons.
 These reasons range from the desire of saving time to the pure need of
@@ -6,9 +6,11 @@ cleanness.
 
 To speed up and to simplify the creation and maintenance of prefered structures
 on computer storage, I imagine a clever tool, that allows a user to define
-his prefered file management structures in a structured (wink) way and apply
-these defined structures with simple clicks. The following sections tries to
-describe the problem domain and tries to sketch the solution.
+his prefered directory structures in a structured (wink) way and apply
+these defined structures with some simple clicks.
+
+The following sections try to describe the problem domain and to sketch a
+solution.
 
 ## How to reproduce a great structure ?
 
@@ -19,9 +21,9 @@ to be equal.
 
 A tool could solve this like the following
 
-- User navigates to a folder containing the desired structure.
+- User navigates to a directory containing the desired structure.
 - User selects a context menu entry, and the structure gets captured.
-- User navigates to another folder, that should get the same structure.
+- User navigates to another directory, that should get the same structure.
 - User selects a context menu entry, and the captured structure gets created.
 
 In other words, the tool
