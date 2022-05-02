@@ -26,12 +26,7 @@ namespace DarkCreekWay.FileStructures.CLI {
         const string s_CaptureVerbRegKeyPath = "shell\\Capture";
         const string s_ApplyVerbRegKeyPath = "shell\\Apply";
 
-        // L10n Resource Management constants
-        const string s_L10n_Namespace = "L10n";
-        const string s_L10n_ResourceName = "Resources";
         const string s_L10n_ContextMenuText = "ContextMenu.Text";
-        const string s_L10n_ContextMenuApplyText = "ContextMenu.Apply.Text";
-        const string s_L10n_ContextMenuCaptureText = "ContextMenu.Capture.Text";
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage( "Performance", "CA1822:Mark members as static", Justification = "A future factory shall create this type when run on Windows and needs to be an instance member" )]
         public void Register() {
@@ -41,7 +36,7 @@ namespace DarkCreekWay.FileStructures.CLI {
 #else
             string? executablePath = Process.GetCurrentProcess().MainModule.FileName;
 #endif
-            ResourceManager rm = new ResourceManager( $"{typeof( MicrosoftWindowsIntegrationService ).Namespace}.{s_L10n_Namespace}.{s_L10n_ResourceName}", typeof( MicrosoftWindowsIntegrationService ).Assembly );
+            ResourceManager rm = new ResourceManager( $"{typeof( MicrosoftWindowsIntegrationService ).Namespace}.{Constants.s_L10n_Namespace}.{Constants.s_L10n_ResourceName}", typeof( MicrosoftWindowsIntegrationService ).Assembly );
 
             string captureCommandLine = string.Concat( "\"", executablePath, "\"", " ", Constants.s_CaptureCommandName, " ", "\"%1\"" );
             string applyCommandLine = string.Concat( "\"", executablePath, "\"", " ", Constants.s_ApplyCommandName, " ", "\"%1\"" );
@@ -62,7 +57,7 @@ namespace DarkCreekWay.FileStructures.CLI {
 
                         using( RegistryKey? apply = verb.CreateSubKey( s_ApplyVerbRegKeyPath, true ) ) {
 
-                            apply.SetValue( s_MuiVerbRegValName, rm.GetString( s_L10n_ContextMenuApplyText )!, RegistryValueKind.String );
+                            apply.SetValue( s_MuiVerbRegValName, rm.GetString( Constants.s_L10n_ApplyCommandText )!, RegistryValueKind.String );
 
                             using( RegistryKey? applyCommand = apply.CreateSubKey( s_ShellCommandRegKeyName, true ) ) {
 
@@ -72,7 +67,7 @@ namespace DarkCreekWay.FileStructures.CLI {
 
                         using( RegistryKey? capture = verb.CreateSubKey( s_CaptureVerbRegKeyPath, true ) ) {
 
-                            capture.SetValue( s_MuiVerbRegValName, rm.GetString( s_L10n_ContextMenuCaptureText )!, RegistryValueKind.String );
+                            capture.SetValue( s_MuiVerbRegValName, rm.GetString( Constants.s_L10n_CaptureCommandText )!, RegistryValueKind.String );
 
                             using( RegistryKey? captureCommand = capture.CreateSubKey( s_ShellCommandRegKeyName, true ) ) {
 
