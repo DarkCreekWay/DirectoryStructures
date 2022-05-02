@@ -2,16 +2,18 @@
 
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>net6.0-windows</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<RootNamespace>DarkCreekWay.FileStructures.CLI</RootNamespace>
-		<AssemblyName>fs</AssemblyName>
+		<AssemblyName>ds</AssemblyName>
 		<NeutralLanguage>en</NeutralLanguage>
+		<UseWindowsForms>True</UseWindowsForms>
+		<RootNamespace>DarkCreekWay.FileStructures.CLI</RootNamespace>
+		<GenerateDependencyFile>false</GenerateDependencyFile>
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
-		<InternalsVisibleTo Include="fs.mstest" />
+		<InternalsVisibleTo Include="ds.mstest" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -23,6 +25,5 @@
 	    <Generator></Generator>
 	  </EmbeddedResource>
 	</ItemGroup>
-
 
 </Project>
