@@ -126,8 +126,38 @@
   <data name="ContextMenu.Text" xml:space="preserve">
     <value>Directory Structures</value>
   </data>
-  <data name="Help.Text" xml:space="preserve">
-    <value>This is a multiline
-help text.</value>
+  <data name="Help.Caption.Text" xml:space="preserve">
+    <value>Directory Structure CLI Help</value>
+  </data>
+  <data name="Help.Message.Text" xml:space="preserve">
+    <value>Syntax: ds [options] [command]
+
+[options]
+
+--help|--?|-h|-?|/help|/h|/?  Display help
+
+[command]
+
+help
+  Display help
+  Syntax: ds help
+
+capture
+  Stores directory structure underneath a directory
+  Syntax: ds capture &lt;path-to-directory&gt;
+      &lt;path-to-directory&gt; - The parent directory of the structure to be stored
+
+apply
+  Creates the stored directory structure underneath a directory
+  Syntax: ds apply &lt;path-to-directory&gt;
+    &lt;path-to-directory&gt; - The parent directory of the structure to be created
+
+register
+  Add Context Menu to Microsoft Windows Explorer
+  Syntax: ds register
+
+unregister
+  Remove Context Menu from Microsoft Windows Explorer
+  Syntax: ds unregister</value>
   </data>
 </root>

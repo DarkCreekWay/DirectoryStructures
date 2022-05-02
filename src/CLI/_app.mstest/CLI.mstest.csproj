@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
       <RootNamespace>DarkCreekWay.FileStructures.CLI</RootNamespace>
-      <AssemblyName>fs.mstest</AssemblyName>
+      <AssemblyName>ds.mstest</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
