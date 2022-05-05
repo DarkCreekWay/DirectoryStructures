@@ -117,15 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ApplyCommand.Text" xml:space="preserve">
-    <value>Apply</value>
-  </data>
-  <data name="CaptureCommand.Text" xml:space="preserve">
-    <value>Capture</value>
-  </data>
-  <data name="ContextMenu.Text" xml:space="preserve">
-    <value>Directory Structures</value>
-  </data>
   <data name="Help.Caption.Text" xml:space="preserve">
     <value>Directory Structure CLI Help</value>
   </data>
@@ -151,13 +142,6 @@ apply
   Creates the stored directory structure underneath a directory
   Syntax: ds apply &lt;path-to-directory&gt;
     &lt;path-to-directory&gt; - The parent directory of the structure to be created
-
-register
-  Add Context Menu to Microsoft Windows Explorer
-  Syntax: ds register
-
-unregister
-  Remove Context Menu from Microsoft Windows Explorer
-  Syntax: ds unregister</value>
+</value>
   </data>
 </root>

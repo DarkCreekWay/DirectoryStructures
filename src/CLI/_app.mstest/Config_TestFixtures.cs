@@ -5,7 +5,7 @@ using System.Text;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DarkCreekWay.FileStructures.CLI {
+namespace DarkCreekWay.DirectoryStructures.CLI {
 
     [TestClass]
     public class Config_TestFixtures {
@@ -29,7 +29,7 @@ namespace DarkCreekWay.FileStructures.CLI {
 
             using( FileStream fs = File.OpenWrite( tempFileName ) ) {
 
-                using( StreamWriter writer = new StreamWriter( fs , Encoding.Unicode) ) {
+                using( StreamWriter writer = new StreamWriter( fs, Encoding.Unicode ) ) {
                     writer.WriteLine( "Hello World" );
                 }
             }

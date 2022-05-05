@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>DarkCreekWay.DirectoryStructures.CLI</RootNamespace>
+      <AssemblyName>ds.config</AssemblyName>
+  </PropertyGroup>
+    
+    <PropertyGroup>
+        <ApplicationVisualStyles>true</ApplicationVisualStyles>
+        <ApplicationUseCompatibleTextRendering>false</ApplicationUseCompatibleTextRendering>
+        <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    </PropertyGroup>
+    
+    <Import Project="..\..\..\_app.shared\_app.shared.projitems" Label="Shared" />
+    <Import Project="..\..\..\.Build\BundleArtefacts.targets"/>
+</Project>

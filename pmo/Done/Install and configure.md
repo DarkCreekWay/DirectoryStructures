@@ -13,5 +13,5 @@ The user is enabled to use the tool with some simple clicks.
 
 ## Breakdown
 
-* [ ] Create new installation and configuration tool
-* [ ] Move required code to the neww tool OR into a shared assembly
+* [x] Create new installation and configuration tool
+* [x] Move required code to the new tool OR into a shared assembly

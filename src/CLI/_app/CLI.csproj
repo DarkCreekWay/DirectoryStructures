@@ -8,7 +8,7 @@
 		<AssemblyName>ds</AssemblyName>
 		<NeutralLanguage>en</NeutralLanguage>
 		<UseWindowsForms>True</UseWindowsForms>
-		<RootNamespace>DarkCreekWay.FileStructures.CLI</RootNamespace>
+		<RootNamespace>DarkCreekWay.DirectoryStructures.CLI</RootNamespace>
 		<GenerateDependencyFile>false</GenerateDependencyFile>
 	</PropertyGroup>
 
@@ -25,5 +25,9 @@
 	    <Generator></Generator>
 	  </EmbeddedResource>
 	</ItemGroup>
+
+	<Import Project="..\_app.shared\_app.shared.projitems" Label="Shared" />
+
+	<Import Project="..\.Build\BundleArtefacts.targets"/>
 
 </Project>

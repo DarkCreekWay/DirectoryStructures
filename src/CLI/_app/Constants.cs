@@ -1,15 +1,7 @@
-﻿namespace DarkCreekWay.FileStructures.CLI {
-    static class Constants {
+﻿namespace DarkCreekWay.DirectoryStructures.CLI {
+    static partial class Constants {
 
         // I18n/L10n
-        public const string s_L10n_Namespace    = "L10n";
-        public const string s_L10n_ResourceName = "Resources";
-
-        public const string s_CompanyDirectoryName = "DarkCreekWay";
-        public const string s_ProductDirectoryName = "DirectoryStructures";
-
-        public const string s_CapturedStructuresDirectoryName   = "Captured";
-        public const string s_DefaultCapturedStructuresFilename = ".default";
 
         // Help command
         public const string s_HelpCommandName        = "help";
@@ -23,20 +15,6 @@
 
         public const string s_L10n_HelpCaptionText   = "Help.Caption.Text";
         public const string s_L10n_HelpMessageText   = "Help.Message.Text";
-
-        // Register command
-        public const string s_RegisterCommandName    = "register";
-
-        // Unregister command
-        public const string s_UnregisterCommandName  = "unregister";
-
-        // Capture command
-        public const string s_CaptureCommandName      = "capture";
-        public const string s_L10n_CaptureCommandText = "CaptureCommand.Text";
-
-        // Apply command
-        public const string s_ApplyCommandName       = "apply";
-        public const string s_L10n_ApplyCommandText  = "ApplyCommand.Text";
 
         // Common App Exit Codes
         internal static int s_ExitCode_Success                            = 0;
