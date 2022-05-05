@@ -1,11 +1,11 @@
 ﻿using System.Resources;
 
-namespace DarkCreekWay.FileStructures.CLI {
+namespace DarkCreekWay.DirectoryStructures.CLI {
     static partial class Program {
 
         static void WriteHelp() {
 
-            ResourceManager rm = new ResourceManager( $"{typeof( MicrosoftWindowsIntegrationService ).Namespace}.{Constants.s_L10n_Namespace}.{Constants.s_L10n_ResourceName}", typeof( MicrosoftWindowsIntegrationService ).Assembly );
+            ResourceManager rm = new ResourceManager( $"{typeof( Program ).Namespace}.{Constants.s_L10n_Namespace}.{Constants.s_L10n_ResourceName}", typeof( Program ).Assembly );
 
             Application.SetHighDpiMode( HighDpiMode.SystemAware );
             Application.EnableVisualStyles();

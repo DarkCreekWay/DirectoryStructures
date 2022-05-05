@@ -1,12 +1,12 @@
 {
   "profiles": {
-    "CLI": {
-      "commandName": "Project",
-      "commandLineArgs": "capture %localappdata%\\temp"
-    },
     "CLI -help": {
       "commandName": "Project",
       "commandLineArgs": "--help"
+    },
+    "CLI capture": {
+      "commandName": "Project",
+      "commandLineArgs": "capture c:\\temp"
     }
   }
 }

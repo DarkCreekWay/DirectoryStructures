@@ -1,13 +1,12 @@
-﻿namespace DarkCreekWay.FileStructures.CLI {
+﻿namespace DarkCreekWay.DirectoryStructures.CLI {
 
     static partial class Program {
 
         static ConfigurationService s_ConfigurationService;
-        static MicrosoftWindowsIntegrationService s_IntegrationService;
+
         static Program() {
 
             s_ConfigurationService = new ConfigurationService();
-            s_IntegrationService = new MicrosoftWindowsIntegrationService();
         }
 
         public static void Main( string[] argv ) {
@@ -38,20 +37,6 @@
                     }
 
                     Apply( argv[1] );
-                    break;
-                }
-
-                case Constants.s_RegisterCommandName: {
-
-                    s_IntegrationService.Register();
-                    Environment.Exit( Constants.s_ExitCode_Success );
-                    break;
-                }
-
-                case Constants.s_UnregisterCommandName: {
-
-                    s_IntegrationService.Unregister();
-                    Environment.Exit( Constants.s_ExitCode_Success );
                     break;
                 }
 

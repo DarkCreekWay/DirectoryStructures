@@ -2,7 +2,7 @@
 
 using System.Text;
 
-namespace DarkCreekWay.FileStructures.CLI {
+namespace DarkCreekWay.DirectoryStructures.CLI {
 
     static partial class Program {
 
@@ -38,6 +38,10 @@ namespace DarkCreekWay.FileStructures.CLI {
 
         static internal void Capture( string rootPath ) {
 
+            if( !Directory.Exists( s_ConfigurationService.CapturedStructuresBasePath ) ) {
+                _ = Directory.CreateDirectory( s_ConfigurationService.CapturedStructuresBasePath );
+            }
+
             string tempFileName = Path.GetTempFileName();
 
             using( FileStream fs = File.OpenWrite( tempFileName ) ) {
@@ -47,12 +51,7 @@ namespace DarkCreekWay.FileStructures.CLI {
                 }
             }
 
-            if( !Directory.Exists( s_ConfigurationService.CapturedStructuresBasePath ) ) {
-                _ = Directory.CreateDirectory( s_ConfigurationService.CapturedStructuresBasePath );
-            }
-
             File.Move( tempFileName, s_ConfigurationService.CapturedStructuresDefaultPath, true );
-
         }
 
         static internal void Capture( string rootPath, TextWriter writer ) {

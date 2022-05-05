@@ -118,39 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ApplyCommand.Text" xml:space="preserve">
-    <value>Anwenden</value>
+    <value>Apply</value>
   </data>
   <data name="CaptureCommand.Text" xml:space="preserve">
-    <value>Speichern</value>
+    <value>Capture</value>
   </data>
   <data name="ContextMenu.Text" xml:space="preserve">
-    <value>Ordnerstruktur</value>
-  </data>
-  <data name="Help.Caption.Text" xml:space="preserve">
-    <value>Verzeichnisstruktur CLI Help</value>
-  </data>
-  <data name="Help.Message.Text" xml:space="preserve">
-    <value>Syntax: ds [options] [command]
-
-[options]
-
---help|--?|-h|-?|/help|/h|/?  Hilfe anzeigen
-
-[command]
-
-help
-  Hilfe anzeigen
-  Syntax: ds help
-
-capture
-  Speichert die Verzeichnisstruktur unterhalb eines Verzeichnisses
-  Syntax: ds capture &lt;path-to-directory&gt;
-    &lt;path-to-directory&gt; - Das übergeordnete Verzeichnis der zu speichernden Struktur
-
-apply
-  Erzeugt die gespeicherte Verzeichnisstruktur unterhalb eines Verzeichnisses
-  Syntax: ds apply &lt;path-to-directory&gt;
-    &lt;path-to-directory&gt; - Das übergeordnete Verzeichnis der zu erstellenden Struktur
-</value>
+    <value>Directory Structures</value>
   </data>
 </root>

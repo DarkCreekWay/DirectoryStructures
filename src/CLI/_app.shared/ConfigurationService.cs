@@ -1,4 +1,4 @@
-﻿namespace DarkCreekWay.FileStructures.CLI {
+﻿namespace DarkCreekWay.DirectoryStructures.CLI {
 
     class ConfigurationService {
         public ConfigurationService() {

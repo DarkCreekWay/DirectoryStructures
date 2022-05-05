@@ -1,0 +1,15 @@
+<Project>
+
+	<Target Name="BundleBuildArtefacts" AfterTargets="Build">
+
+		<Message></Message>
+		
+		<ItemGroup>
+			<Files Include="$(OutputPath)\**\*"/>
+		</ItemGroup>
+
+		<Copy SourceFiles="@(Files)" DestinationFolder="$(SolutionDir)\src\CLI\.Build\artefacts\$(TargetFramework)\%(RecursiveDir)"/>
+	</Target>
+	
+	
+</Project>

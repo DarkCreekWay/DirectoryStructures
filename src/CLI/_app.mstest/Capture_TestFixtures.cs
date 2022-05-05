@@ -1,6 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DarkCreekWay.FileStructures.CLI {
+namespace DarkCreekWay.DirectoryStructures.CLI {
     [TestClass]
     public class Capture_TestFixtures {
 

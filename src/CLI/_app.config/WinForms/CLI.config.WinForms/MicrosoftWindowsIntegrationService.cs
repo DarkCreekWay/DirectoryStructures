@@ -1,8 +1,7 @@
 ﻿using System.Resources;
-
 using Microsoft.Win32;
 
-namespace DarkCreekWay.FileStructures.CLI {
+namespace DarkCreekWay.DirectoryStructures.CLI {
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage( "Interoperability", "CA1416:Validate platform compatibility", Justification = "A future factory shall create specific impl. type per OS" )]
     class MicrosoftWindowsIntegrationService {
@@ -31,11 +30,11 @@ namespace DarkCreekWay.FileStructures.CLI {
         [System.Diagnostics.CodeAnalysis.SuppressMessage( "Performance", "CA1822:Mark members as static", Justification = "A future factory shall create this type when run on Windows and needs to be an instance member" )]
         public void Register() {
 
-#if NET6_0_OR_GREATER
-            string? executablePath = Environment.ProcessPath;
-#else
-            string? executablePath = Process.GetCurrentProcess().MainModule.FileName;
-#endif
+            string executablePath = GetExecutablePath();
+            if(!File.Exists( executablePath) ) {
+                throw new FileNotFoundException();
+            }
+
             ResourceManager rm = new ResourceManager( $"{typeof( MicrosoftWindowsIntegrationService ).Namespace}.{Constants.s_L10n_Namespace}.{Constants.s_L10n_ResourceName}", typeof( MicrosoftWindowsIntegrationService ).Assembly );
 
             string captureCommandLine = string.Concat( "\"", executablePath, "\"", " ", Constants.s_CaptureCommandName, " ", "\"%1\"" );
@@ -93,6 +92,18 @@ namespace DarkCreekWay.FileStructures.CLI {
                     shell.DeleteSubKeyTree( s_VerbRegKeyName, false );
                 }
             }
+        }
+
+        static string GetExecutablePath() {
+
+#if NET6_0_OR_GREATER
+            string? executablePath = Environment.ProcessPath;
+#else
+            string? executablePath = Process.GetCurrentProcess().MainModule.FileName;
+#endif
+            string basePath = Path.GetDirectoryName( executablePath );
+            return Path.Combine( basePath!, "ds.exe" );
+
         }
     }
 }
