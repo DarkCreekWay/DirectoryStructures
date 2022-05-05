@@ -57,4 +57,587 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="_unregisterContextMenuButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>508, 57</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_unregisterContextMenuButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_unregisterContextMenuButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 43</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_unregisterContextMenuButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="_unregisterContextMenuButton.Text" xml:space="preserve">
+    <value>Unregister</value>
+  </data>
+  <data name="&gt;&gt;_unregisterContextMenuButton.Name" xml:space="preserve">
+    <value>_unregisterContextMenuButton</value>
+  </data>
+  <data name="&gt;&gt;_unregisterContextMenuButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_unregisterContextMenuButton.Parent" xml:space="preserve">
+    <value>_contentTTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;_unregisterContextMenuButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="_deleteLocalDataButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>508, 114</value>
+  </data>
+  <data name="_deleteLocalDataButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_deleteLocalDataButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 43</value>
+  </data>
+  <data name="_deleteLocalDataButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="_deleteLocalDataButton.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;_deleteLocalDataButton.Name" xml:space="preserve">
+    <value>_deleteLocalDataButton</value>
+  </data>
+  <data name="&gt;&gt;_deleteLocalDataButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_deleteLocalDataButton.Parent" xml:space="preserve">
+    <value>_contentTTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;_deleteLocalDataButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_closeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>522, 14</value>
+  </data>
+  <data name="_closeButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_closeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 49</value>
+  </data>
+  <data name="_closeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="_closeButton.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;_closeButton.Name" xml:space="preserve">
+    <value>_closeButton</value>
+  </data>
+  <data name="&gt;&gt;_closeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_closeButton.Parent" xml:space="preserve">
+    <value>_dialogControlsPanel</value>
+  </data>
+  <data name="&gt;&gt;_closeButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_headlineLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_headlineLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="_headlineLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 18</value>
+  </data>
+  <data name="_headlineLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_headlineLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>568, 38</value>
+  </data>
+  <data name="_headlineLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="_headlineLabel.Text" xml:space="preserve">
+    <value>DarkCreekway's Tool for Directory Structures</value>
+  </data>
+  <data name="&gt;&gt;_headlineLabel.Name" xml:space="preserve">
+    <value>_headlineLabel</value>
+  </data>
+  <data name="&gt;&gt;_headlineLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_headlineLabel.Parent" xml:space="preserve">
+    <value>_headlinePanel</value>
+  </data>
+  <data name="&gt;&gt;_headlineLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_copyrightLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_copyrightLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 23</value>
+  </data>
+  <data name="_copyrightLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 30</value>
+  </data>
+  <data name="_copyrightLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="_copyrightLabel.Text" xml:space="preserve">
+    <value>Copyright (c) 2017 by DarkCreekWay</value>
+  </data>
+  <data name="&gt;&gt;_copyrightLabel.Name" xml:space="preserve">
+    <value>_copyrightLabel</value>
+  </data>
+  <data name="&gt;&gt;_copyrightLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_copyrightLabel.Parent" xml:space="preserve">
+    <value>_dialogControlsPanel</value>
+  </data>
+  <data name="&gt;&gt;_copyrightLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_gitHubProfileLinkLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_gitHubProfileLinkLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 35</value>
+  </data>
+  <data name="_gitHubProfileLinkLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_gitHubProfileLinkLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 30</value>
+  </data>
+  <data name="_gitHubProfileLinkLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="_gitHubProfileLinkLabel.Text" xml:space="preserve">
+    <value>on Github</value>
+  </data>
+  <data name="&gt;&gt;_gitHubProfileLinkLabel.Name" xml:space="preserve">
+    <value>_gitHubProfileLinkLabel</value>
+  </data>
+  <data name="&gt;&gt;_gitHubProfileLinkLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_gitHubProfileLinkLabel.Parent" xml:space="preserve">
+    <value>_commercialPanel</value>
+  </data>
+  <data name="&gt;&gt;_gitHubProfileLinkLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_dialogControlsPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="_dialogControlsPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 364</value>
+  </data>
+  <data name="_dialogControlsPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_dialogControlsPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>690, 77</value>
+  </data>
+  <data name="_dialogControlsPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;_dialogControlsPanel.Name" xml:space="preserve">
+    <value>_dialogControlsPanel</value>
+  </data>
+  <data name="&gt;&gt;_dialogControlsPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_dialogControlsPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_dialogControlsPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_headlinePanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="_headlinePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="_headlinePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_headlinePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>690, 77</value>
+  </data>
+  <data name="_headlinePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;_headlinePanel.Name" xml:space="preserve">
+    <value>_headlinePanel</value>
+  </data>
+  <data name="&gt;&gt;_headlinePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_headlinePanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_headlinePanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;_contentTTableLayoutPanel.Name" xml:space="preserve">
+    <value>_contentTTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;_contentTTableLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_contentTTableLayoutPanel.Parent" xml:space="preserve">
+    <value>_contentPanel</value>
+  </data>
+  <data name="&gt;&gt;_contentTTableLayoutPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_contentTTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="_deleteLocalDataLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_deleteLocalDataButton" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="_unregisterContextMenuButton" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="_registerContextMenuButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,494,Absolute,14,Absolute,154,Percent,100" /&gt;&lt;Rows Styles="Absolute,43,Absolute,14,Absolute,43,Absolute,14,Absolute,43,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;_commercialPanel.Name" xml:space="preserve">
+    <value>_commercialPanel</value>
+  </data>
+  <data name="&gt;&gt;_commercialPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_commercialPanel.Parent" xml:space="preserve">
+    <value>_contentPanel</value>
+  </data>
+  <data name="&gt;&gt;_commercialPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_contentPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="_contentPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 14</value>
+  </data>
+  <data name="_contentPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_contentPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>662, 273</value>
+  </data>
+  <data name="_contentPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;_contentPanel.Name" xml:space="preserve">
+    <value>_contentPanel</value>
+  </data>
+  <data name="&gt;&gt;_contentPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_contentPanel.Parent" xml:space="preserve">
+    <value>_contentLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;_contentPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_contentTTableLayoutPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;_deleteLocalDataLabel.Name" xml:space="preserve">
+    <value>_deleteLocalDataLabel</value>
+  </data>
+  <data name="&gt;&gt;_deleteLocalDataLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_deleteLocalDataLabel.Parent" xml:space="preserve">
+    <value>_contentTTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;_deleteLocalDataLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_registerContextMenuButton.Name" xml:space="preserve">
+    <value>_registerContextMenuButton</value>
+  </data>
+  <data name="&gt;&gt;_registerContextMenuButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_registerContextMenuButton.Parent" xml:space="preserve">
+    <value>_contentTTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;_registerContextMenuButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>_contentTTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="_contentTTableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="_contentTTableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="_contentTTableLayoutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_contentTTableLayoutPanel.RowCount" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="_contentTTableLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>662, 196</value>
+  </data>
+  <data name="_contentTTableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;_contentTTableLayoutPanel.Name" xml:space="preserve">
+    <value>_contentTTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;_contentTTableLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_contentTTableLayoutPanel.Parent" xml:space="preserve">
+    <value>_contentPanel</value>
+  </data>
+  <data name="&gt;&gt;_contentTTableLayoutPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_contentTTableLayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="_deleteLocalDataLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_deleteLocalDataButton" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="_unregisterContextMenuButton" Row="2" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="_registerContextMenuButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,494,Absolute,14,Absolute,154,Percent,100" /&gt;&lt;Rows Styles="Absolute,43,Absolute,14,Absolute,43,Absolute,14,Absolute,43,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="_deleteLocalDataLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="_deleteLocalDataLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_deleteLocalDataLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 114</value>
+  </data>
+  <data name="_deleteLocalDataLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_deleteLocalDataLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 43</value>
+  </data>
+  <data name="_deleteLocalDataLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="_deleteLocalDataLabel.Text" xml:space="preserve">
+    <value>Delete local data</value>
+  </data>
+  <data name="_deleteLocalDataLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;_deleteLocalDataLabel.Name" xml:space="preserve">
+    <value>_deleteLocalDataLabel</value>
+  </data>
+  <data name="&gt;&gt;_deleteLocalDataLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_deleteLocalDataLabel.Parent" xml:space="preserve">
+    <value>_contentTTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;_deleteLocalDataLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_registerContextMenuButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>508, 0</value>
+  </data>
+  <data name="_registerContextMenuButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_registerContextMenuButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 43</value>
+  </data>
+  <data name="_registerContextMenuButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="_registerContextMenuButton.Text" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="&gt;&gt;_registerContextMenuButton.Name" xml:space="preserve">
+    <value>_registerContextMenuButton</value>
+  </data>
+  <data name="&gt;&gt;_registerContextMenuButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_registerContextMenuButton.Parent" xml:space="preserve">
+    <value>_contentTTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;_registerContextMenuButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>408, 43</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Integrate with Microsoft Windows Explorer</value>
+  </data>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>_contentTTableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;_visitUsLabel.Name" xml:space="preserve">
+    <value>_visitUsLabel</value>
+  </data>
+  <data name="&gt;&gt;_visitUsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_visitUsLabel.Parent" xml:space="preserve">
+    <value>_commercialPanel</value>
+  </data>
+  <data name="&gt;&gt;_visitUsLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_commercialPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="_commercialPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 196</value>
+  </data>
+  <data name="_commercialPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_commercialPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>662, 77</value>
+  </data>
+  <data name="_commercialPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;_commercialPanel.Name" xml:space="preserve">
+    <value>_commercialPanel</value>
+  </data>
+  <data name="&gt;&gt;_commercialPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_commercialPanel.Parent" xml:space="preserve">
+    <value>_contentPanel</value>
+  </data>
+  <data name="&gt;&gt;_commercialPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_visitUsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_visitUsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 4</value>
+  </data>
+  <data name="_visitUsLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_visitUsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 30</value>
+  </data>
+  <data name="_visitUsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="_visitUsLabel.Text" xml:space="preserve">
+    <value>Visit us</value>
+  </data>
+  <data name="&gt;&gt;_visitUsLabel.Name" xml:space="preserve">
+    <value>_visitUsLabel</value>
+  </data>
+  <data name="&gt;&gt;_visitUsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_visitUsLabel.Parent" xml:space="preserve">
+    <value>_commercialPanel</value>
+  </data>
+  <data name="&gt;&gt;_visitUsLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="_contentLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="_contentLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 77</value>
+  </data>
+  <data name="_contentLayoutPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="_contentLayoutPanel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>14, 14, 14, 0</value>
+  </data>
+  <data name="_contentLayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>690, 287</value>
+  </data>
+  <data name="_contentLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;_contentLayoutPanel.Name" xml:space="preserve">
+    <value>_contentLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;_contentLayoutPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_contentLayoutPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_contentLayoutPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>168, 168</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>690, 441</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>714, 505</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>714, 505</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Configure DarkCreekWay's Tool for Directory Structures</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
