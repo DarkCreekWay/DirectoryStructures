@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+      <NeutralLanguage>en</NeutralLanguage>
     <RootNamespace>DarkCreekWay.DirectoryStructures.CLI</RootNamespace>
       <AssemblyName>ds.config</AssemblyName>
   </PropertyGroup>
