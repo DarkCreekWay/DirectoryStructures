@@ -211,7 +211,7 @@ entwickelt und getestet.
 DarkCreekWay's Werkzeuge basieren auf Microsoft .NET Technologien.
 Für das Ausführen dieser Anwendung wird die .NET 6.0 Desktop Runtime benötigt.
 
-#### Bestehende Installation prüfen
+#### Installierte .NET Version prüfen
 
 Sollten Sie bereits eine .NET Core Installation auf Ihrem PC haben, so können Sie
 die Verfügbarkeit von .NET 6 auf Ihrem System über die Befehlszeile überprüfen.
