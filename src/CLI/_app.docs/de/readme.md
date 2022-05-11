@@ -12,13 +12,12 @@ Dateien mit Hilfe von Verzeichnissen zu strukturieren bietet viele Vorteile.
   zunehmender Anzahl von Dateien in einem Verzeichnis viele Computersysteme
   länger für die Auflistung benötigen.
 
-Bewährte Strukturen auf neue Verzeichnisse anzuwenden ist allerdings nicht
-ohne weiteres möglich.
+Eine Bewährte Verzeichnisstruktur auf weitere oder neue Verzeichnisse
+zu übertragen ist allerdings nicht ohne weiteres möglich.
 
 Der Einsatz von z.B. der **Kopieren & Einfügen** Funktion des Microsoft Windows
 Explorers scheidet aus, da nicht nur die Struktur, sonderen auch alle Dateien
 kopiert werden.
-
 So bleibt nur der Weg offen, die gewünschte Struktur von Hand neu anzulegen.
 
 **DarkCreekWay's Werkzeug für Verzeichnisstrukturen** schließt diese Lücke und
@@ -81,7 +80,8 @@ angewendet werden.
 
 ##### Bedienung mit der Maus
 
-* Öffnen Sie das Kontextmenü durch Klicken Sie mit der **rechten Maustaste" auf das Verzeichnis
+* Öffnen Sie das Kontextmenü durch Klicken Sie mit der **rechten Maustaste** auf das Verzeichnis
+* **Nur Windows 11** - Klicken Sie auf den Menüeintrag **Weitere Optionen anzeigen**
 * Wählen Sie das Menü **Verzeichnisstruktur -> Speichern** durch Bewegen des Zeigers
   über den Eintrag **Verzeichnisstruktur** hin zum Eintrag **Speichern**.
 * Wählen Sie den Eintrag **Speichern** durch Klicken mit der **linken Maustaste**
@@ -118,6 +118,7 @@ angewendet werden.
 ##### Bedienung mit der Maus
 
 * Öffnen Sie das Kontextmenü durch Klicken Sie mit der **rechten Maustaste" auf das Verzeichnis
+* **Nur Windows 11** - Klicken Sie auf den Menüeintrag **Weitere Optionen anzeigen**
 * Wählen Sie das Menü **Verzeichnisstruktur -> Anwenden** durch Bewegen des Zeigers
   über den Eintrag **Verzeichnisstruktur** hin zum Eintrag **Anwenden**.
 * Wählen Sie den Eintrag **Anwenden** durch Klicken mit der **linken Maustaste**
@@ -235,12 +236,11 @@ dotnet --info | find "Microsoft.WindowsDesktop.App 6"
 
 #### .NET 6 herunterladen und installieren
 
-Laden Sie die für Ihr System passende .NET 6 **Desktop Runtime** herunter.
+##### Auswahl des richtigen Installationspakets
 
-##### Welches System habe ich ?
-
-Für die Auswahl des korrekten Downloads müssen Sie Ihre genaue Prozessor-Architektur
+Für die Auswahl des richtigen Installationspakets müssen Sie Ihre Prozessor-Architektur
 feststellen. Führen Sie dazu eine der folgenden Befehle über die Befehlszeile aus
+und ermitteln dann das richtige Paket.
 
 ###### DOS
 
@@ -254,15 +254,17 @@ echo %PROCESSOR_ARCHITECTURE%
  $Env:PROCESSOR_ARCHITECTURE
 ~~~
 
-Vergleichen Sie den ausgegebenen Wert mit der folgenden Tabelle
+Ermitteln Sie das richtige Paket für den angezeigten Wert anhand folgender Tabelle
 
-| Ausgabe | Download |
+| Ausgabe | Paket    |
 |:-------:|:--------:|
 |   x86   |   x86    |
 |  AMD64  |   x64    |
 |  ARM64  |  Arm64   |
 
-Starten Sie danach die Installation per Doppelklick auf die heruntergeladene Datei
+Laden Sie die für Ihr System passende .NET 6 **Desktop Runtime** Paket herunter.
+
+Starten Sie die Installation per Doppelklick auf die heruntergeladene Datei
 und folgen den Installationsanweisungen.
 
 > Bitte laden Sie die Installation für Ihren PC unterhalb des Bereichs **Run desktop apps** herunter.
@@ -296,15 +298,15 @@ Installation: **Pro Benutzer**
 
 #### Voraussetzungen
 
-| Komponente     |                                 |
-| -------------- | ------------------------------- |
-| Betriebssystem | Windows 10/Windows 11 (x86|x64) |
-| .NET Runtime   | .NET 6 Desktop Runtime          |
+| Komponente     |                         |
+| -------------- | ----------------------- |
+| Betriebssystem | Windows 10 (x86\|x64)   |
+|                | Windows 11 (x86\|x64)   |
+| .NET Runtime   | .NET 6 Desktop Runtime  |
 
-#### Vorgenommene Änderungen
+#### Änderungen am System
 
-Auf der Festplatte und in der Windows Registrierung werden folgende Änderungen
-vorgenommen:
+Auf der Festplatte und in der Windows Registrierung werden folgende Änderungen vorgenommen:
 
 Art       | Änderung    | Pfad
 ----------|-------------|-------------------------------------------------------------------
@@ -342,7 +344,7 @@ ds.exe capture "c:\users\BeispielBenutzer\Verzeichnis Quelle"
 #### Verzeichnisstruktur über die Kommandozeile anwenden
 
 Rufen Sie die Befehl **ds.exe** mit dem **apply** Unterbefehl und dem vollständigen
-Pfad zum Quellverzechnis auf.
+Pfad zum Zielverzechnis auf.
 
 ##### Syntax
 
@@ -376,8 +378,6 @@ Die Werkzeuge aus **DarkCreekWay's Werkzeugkoffer**
 * reduzieren WTF-Momente und vermindern Stress am PC
 
 Viel Spass :-)
-
-Euer DCW
 
 ---
 
