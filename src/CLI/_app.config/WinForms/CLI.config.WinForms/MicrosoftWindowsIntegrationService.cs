@@ -21,7 +21,7 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
 
         const string s_VerbBaseRegKeyPath = s_ClassesRegKeyPath + "\\" + s_ProgIdRegKeyName;
 
-        const string s_VerbRegKeyName = "DarkCreekWay.FolderStructures";
+        const string s_VerbRegKeyName = "DarkCreekWay.DirectoryStructures";
         const string s_CaptureVerbRegKeyPath = "shell\\Capture";
         const string s_ApplyVerbRegKeyPath = "shell\\Apply";
 

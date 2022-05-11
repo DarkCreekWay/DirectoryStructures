@@ -19,6 +19,11 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CLI.shared", "src\CLI\_app.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLI.Docs", "src\CLI\_app.docs\CLI.Docs.csproj", "{D863D626-3410-49B1-9EF6-2734ED6A4845}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CLI.deploy", "CLI.deploy", "{D524FD46-5150-4049-8F8E-6BE75AE38185}"
+	ProjectSection(SolutionItems) = preProject
+		src\CLI\_app.deploy\install.ps1 = src\CLI\_app.deploy\install.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\CLI\_app.shared\_app.shared.projitems*{78ed599a-94d8-4f33-a620-f2ed458c304d}*SharedItemsImports = 5
@@ -112,6 +117,7 @@ Global
 		{78ED599A-94D8-4F33-A620-F2ED458C304D} = {5AC9CEBA-7541-476F-86F2-95F74829E384}
 		{7CD424A7-C469-4B42-A9ED-F5C40CA4C478} = {7783C53A-E2E3-4291-B36B-BFEDA534133A}
 		{D863D626-3410-49B1-9EF6-2734ED6A4845} = {7783C53A-E2E3-4291-B36B-BFEDA534133A}
+		{D524FD46-5150-4049-8F8E-6BE75AE38185} = {7783C53A-E2E3-4291-B36B-BFEDA534133A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EE576DF-CAD5-437E-A644-8748E76DD1AF}
