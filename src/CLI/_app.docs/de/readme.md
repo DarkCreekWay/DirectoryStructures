@@ -1,5 +1,5 @@
 ﻿
-# DarkCreekways Werkzeug für Verzeichnisstrukturen
+# DarkCreekway's Werkzeug für Verzeichnisstrukturen
 
 ## Einführung
 
@@ -16,7 +16,7 @@ Eine Bewährte Verzeichnisstruktur auf weitere oder neue Verzeichnisse
 zu übertragen ist allerdings nicht ohne weiteres möglich.
 
 Der Einsatz von z.B. der **Kopieren & Einfügen** Funktion des Microsoft Windows
-Explorers scheidet aus, da nicht nur die Struktur, sonderen auch alle Dateien
+Explorers scheidet aus, da nicht nur die Struktur, sondern auch alle Dateien
 kopiert werden.
 So bleibt nur der Weg offen, die gewünschte Struktur von Hand neu anzulegen.
 
@@ -228,7 +228,7 @@ installieren.
 dotnet --info | find "Microsoft.WindowsDesktop.App 6"
 ~~~
 
-##### Powershell
+##### PowerShell
 
 ~~~PowerShell
 (dotnet --info) | Select-String -Pattern "Microsoft.WindowsDesktop.App 6"
@@ -290,7 +290,7 @@ Folgen Sie dazu den Anweisungen im Abschnitt [Konfiguration](#konfiguration)
 
 ---
 
-## Für IT Pros'
+## Für IT-Pros'
 
 ### Cheatsheet
 
@@ -325,7 +325,7 @@ und wechseln Sie in das Anwendungsverzeichnis
 
 #### Verzeichnisstruktur über die Kommandozeile speichern
 
-Rufen Sie die Befehl **ds.exe** mit dem **capture** Unterbefehl und dem vollständigen
+Rufen Sie den Befehl **ds.exe** mit dem **capture** Unterbefehl und dem vollständigen
 Pfad zum Quellverzechnis auf.
 
 ##### Syntax
@@ -343,8 +343,8 @@ ds.exe capture "c:\users\BeispielBenutzer\Verzeichnis Quelle"
 
 #### Verzeichnisstruktur über die Kommandozeile anwenden
 
-Rufen Sie die Befehl **ds.exe** mit dem **apply** Unterbefehl und dem vollständigen
-Pfad zum Zielverzechnis auf.
+Rufen Sie den Befehl **ds.exe** mit dem **apply** Unterbefehl und dem vollständigen
+Pfad zum Zielverzeichnis auf.
 
 ##### Syntax
 
@@ -377,8 +377,8 @@ Die Werkzeuge aus **DarkCreekWay's Werkzeugkoffer**
 * machen Arbeiten am Computer intuitiver, schneller und effizienter
 * reduzieren WTF-Momente und vermindern Stress am PC
 
-Viel Spass :-)
+Viel Spaß :-)
 
 ---
 
-Copyright &copy; 2017 by [DarkCreekWay](https://github.com/DarkCreekWay)
+Copyright &copy; 2017 [DarkCreekWay](https://github.com/DarkCreekWay)
