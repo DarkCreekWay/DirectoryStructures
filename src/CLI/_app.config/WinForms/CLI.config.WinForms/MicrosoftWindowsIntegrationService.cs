@@ -1,9 +1,9 @@
-﻿using System.Resources;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Resources;
 using Microsoft.Win32;
 
 namespace DarkCreekWay.DirectoryStructures.CLI {
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage( "Interoperability", "CA1416:Validate platform compatibility", Justification = "A future factory shall create specific impl. type per OS" )]
     class MicrosoftWindowsIntegrationService {
 
         const string s_ClassesRegKeyPath = "SOFTWARE\\Classes";
@@ -27,7 +27,7 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
 
         const string s_L10n_ContextMenuText = "ContextMenu.Text";
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage( "Performance", "CA1822:Mark members as static", Justification = "A future factory shall create this type when run on Windows and needs to be an instance member" )]
+        [SuppressMessage( "Performance", "CA1822:Mark members as static", Justification = "A future factory shall create this type when run on Windows and so needs to be an instance member" )]
         public void Register() {
 
             string executablePath = GetExecutablePath();

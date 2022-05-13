@@ -7,11 +7,11 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Product>File Structures</Product>
+		<Product>DarkCreekWay's Tool for Directory Structures</Product>
 		<Company>DarkCreekWay</Company>
 		<Authors>DarkCreekWay</Authors>
-		<Copyright>Copyright © DarkCreekWay 2022</Copyright>
-		<InformationalVersion>2022</InformationalVersion>
+		<Copyright>Copyright © DarkCreekWay 2017</Copyright>
+		<InformationalVersion>2022.05</InformationalVersion>
 	</PropertyGroup>
 	
 </Project>

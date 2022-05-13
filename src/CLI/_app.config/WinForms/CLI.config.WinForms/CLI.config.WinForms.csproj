@@ -16,7 +16,12 @@
         <ApplicationUseCompatibleTextRendering>false</ApplicationUseCompatibleTextRendering>
         <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
     </PropertyGroup>
-    
+
+    <ItemGroup>
+        <RuntimeHostConfigurationOption Include="I18n.Directory" Value="L10n" />
+    </ItemGroup>
+
     <Import Project="..\..\..\_app.shared\_app.shared.projitems" Label="Shared" />
+    <Import Project="..\..\..\.Build\MoveResourceAssemblies.targets"/>
     <Import Project="..\..\..\.Build\BundleArtefacts.targets"/>
 </Project>

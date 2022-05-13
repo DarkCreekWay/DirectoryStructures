@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- 
+
+    Description
+    Moves Resource Assemblies into a configurable sub-directory.
+
+    Rational
+    Working with sub-directories support cleaner app directory structures
+    and helps admins and users to navigate easier within the app directory.
+
+    Usage
+
+    1. Define Target Directory as RuntimeConfigurationOption
+
+    Example
+    <ItemGroup>
+        <RuntimeHostConfigurationOption Include="I18n.Directory" Value="L10n" />
+    </ItemGroup>
+
+
+    2. Import this file into your .*proj and add 
+
+    Example
+    <Project Import="<Path>\MoveResourceAssemblies.targets"
+
+    3. Add custom resource assembly resolving code to your .NET project
+
+    Example
+
+    public class ResourceAssemblResolver
+    {
+        const string s_SatelliteSuffix = ".resources";
+        const string s_ResourceDirectoryParameterName = "I18n.Directory";
+
+        string _i18nDir;
+
+        public ResourceAssemblResolver()
+        {
+            _i18nDir = AppContext.GetData( s_ResourceDirectoryParameterName ) as string ?? "L10n";
+            AssemblyLoadContext.Default.Resolving += Default_Resolving;
+        }
+
+        Assembly? Default_Resolving(AssemblyLoadContext context, AssemblyName assemblyName)
+        {
+            // Caller requested a language specific resource (satellite) assembly.
+            // The following custom logic searches for the requested logic within a specific 
+            // sub-directory relative to the location of the main assembly.
+            //
+            // Be aware, that no specific logic for case sensitive FileSystems (eg. on Linux) is part of the code.
+            // For some more inspiration, check the implementation of Method ResolveSatelliteAssembly in the official dot.net source repo
+            // https://source.dot.net/System.Private.CoreLib/AssemblyLoadContext.cs.html#cc6b76f71a1f5af5
+
+            if (assemblyName.CultureName?.Length == 0) { 
+                return null; 
+            }
+
+            if (assemblyName.Name == null || !assemblyName.Name.EndsWith(s_SatelliteSuffix, StringComparison.Ordinal)) {
+                return null;
+            }
+
+            string path = Path.Combine(AppContext.BaseDirectory, _i18nDir, assemblyName.CultureName!, $"{assemblyName.Name}.dll");
+            
+            return File.Exists(path) ? context.LoadFromAssemblyPath(path) : null;
+
+        }
+    -->
+
+<Project>
+    <Target Name="ResourceAssemblies" AfterTargets="CopyFilesToOutputDirectory">
+
+        <!-- Transform RuntimeHostConfigurationOption to Property for determining target directory -->
+        
+        <!-- 
+        Create item list for specific item of an item group 
+        The items are specified by filtering (via condition) by item identity
+        The result can be accessed via item list notation: @(NewItemName)
+        
+        Disadvantage: 
+        Accessing the value requires item list notation:  @NewItemName)
+        This is not intuitive to be used for single valued results.
+        For an example, check the commented snippet below.
+        -->
+        <!--<ItemGroup>
+            <L10nDirectory Include="@(RuntimeHostConfigurationOption->'%(Value)')" Condition="'%(RuntimeHostConfigurationOption.Identity)' == 'I18n.Directory'"/>
+        </ItemGroup>
+        <Message Text="@(L10nDirectory)"/>-->
+
+        <!-- 
+        Create property from specific item of an item group 
+        The value of the new property is determined by filtering an item group (using a condition) by item identity
+        
+        Advantage:
+        Accessing the property with the $(PropertyName) notation is possible
+        This is more intuitive for singlue valued results.
+        Disadvantage:
+        The name of the new property is a string literal and the source of the property is not easy to find within larget build scripts.
+        -->
+        <CreateProperty
+            Value="@(RuntimeHostConfigurationOption->'%(Value)')"
+            Condition="'%(RuntimeHostConfigurationOption.Identity)' == 'I18n.Directory'">
+            <Output TaskParameter="Value" PropertyName="L10nDirectory" />
+        </CreateProperty>
+
+    <RemoveDir Directories="$(OutputPath)$(L10nDirectory)"/>
+    <MakeDir Directories="$(OutputPath)$(L10nDirectory)" />
+    <ItemGroup>
+        <ResourceAssemblies Include="$(OutputPath)**\*.resources.dll"/>
+    </ItemGroup>
+    <Move SourceFiles="@(ResourceAssemblies)" DestinationFolder="$(OutputPath)$(L10nDirectory)\%(ResourceAssemblies.RecursiveDir)" />
+    <RemoveDir Directories="$(BuildRoot)%(ResourceAssemblies.RelativeDir)" />
+    </Target>
+    <Target Name="ClearLanguageResources" AfterTargets="AfterClean">
+        <RemoveDir Directories="$(OutputPath)$(L10nDirectory)"/>
+    </Target>
+</Project>

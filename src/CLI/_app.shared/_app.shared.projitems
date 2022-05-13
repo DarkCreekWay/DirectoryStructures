@@ -9,6 +9,7 @@
     <Import_RootNamespace>_app.shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ResourceAssemblResolver.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ConfigurationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
   </ItemGroup>

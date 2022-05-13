@@ -25,11 +25,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CLI.deploy", "CLI.deploy", 
 	EndProjectSection
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		src\CLI\_app.shared\_app.shared.projitems*{78ed599a-94d8-4f33-a620-f2ed458c304d}*SharedItemsImports = 5
-		src\CLI\_app.shared\_app.shared.projitems*{7cd424a7-c469-4b42-a9ed-f5c40ca4c478}*SharedItemsImports = 13
-		src\CLI\_app.shared\_app.shared.projitems*{e6f4dd70-efa3-4a1d-9ebf-896a1abffed1}*SharedItemsImports = 5
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|arm64 = Debug|arm64
@@ -66,7 +61,6 @@ Global
 		{E7B5275B-BF85-40F7-A33F-7E0281015252}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{E7B5275B-BF85-40F7-A33F-7E0281015252}.Debug|x86.Build.0 = Debug|Any CPU
 		{E7B5275B-BF85-40F7-A33F-7E0281015252}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E7B5275B-BF85-40F7-A33F-7E0281015252}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E7B5275B-BF85-40F7-A33F-7E0281015252}.Release|arm64.ActiveCfg = Release|Any CPU
 		{E7B5275B-BF85-40F7-A33F-7E0281015252}.Release|arm64.Build.0 = Release|Any CPU
 		{E7B5275B-BF85-40F7-A33F-7E0281015252}.Release|x64.ActiveCfg = Release|Any CPU
@@ -121,5 +115,10 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EE576DF-CAD5-437E-A644-8748E76DD1AF}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\CLI\_app.shared\_app.shared.projitems*{78ed599a-94d8-4f33-a620-f2ed458c304d}*SharedItemsImports = 5
+		src\CLI\_app.shared\_app.shared.projitems*{7cd424a7-c469-4b42-a9ed-f5c40ca4c478}*SharedItemsImports = 13
+		src\CLI\_app.shared\_app.shared.projitems*{e6f4dd70-efa3-4a1d-9ebf-896a1abffed1}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

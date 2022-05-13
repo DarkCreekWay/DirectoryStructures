@@ -12,22 +12,28 @@
 		<GenerateDependencyFile>false</GenerateDependencyFile>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<RuntimeHostConfigurationOption Include="I18n.Directory" Value="L10n" />
+	</ItemGroup>
+
 	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
 		<InternalsVisibleTo Include="ds.mstest" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
+		<PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Update="L10n\Resources.resx">
-	    <Generator></Generator>
-	  </EmbeddedResource>
+		<EmbeddedResource Update="L10n\Resources.resx">
+			<Generator></Generator>
+		</EmbeddedResource>
 	</ItemGroup>
 
 	<Import Project="..\_app.shared\_app.shared.projitems" Label="Shared" />
 
-	<Import Project="..\.Build\BundleArtefacts.targets"/>
+	<Import Project="..\.Build\MoveResourceAssemblies.targets"/>
+	
+	<Import Project="..\.Build\BundleArtefacts.targets" />
 
 </Project>
