@@ -13,7 +13,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<RuntimeHostConfigurationOption Include="I18n.Directory" Value="L10n" />
+		<RuntimeHostConfigurationOption Include="I18n.Directory" Value="l10n" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
@@ -32,8 +32,8 @@
 
 	<Import Project="..\_app.shared\_app.shared.projitems" Label="Shared" />
 
-	<Import Project="..\.Build\MoveResourceAssemblies.targets"/>
+	<Import Project="..\.MSBuild\MoveResourceAssemblies.targets"/>
 	
-	<Import Project="..\.Build\BundleArtefacts.targets" />
+	<Import Project="..\.MSBuild\BundleArtefacts.targets" />
 
 </Project>

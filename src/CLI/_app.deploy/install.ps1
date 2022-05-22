@@ -13,8 +13,8 @@
   For finishing the deployment, run ds.xonfig.exe
 #>
 
-# $sourceDirectory = $PSScriptRoot
-$sourceDirectory = 'p:\DirectoryStructures\src\CLI\.Build\artefacts\net6.0-windows\*'
+# $sourceDirectory = 'p:\DirectoryStructures\src\CLI\.Build\artefacts\net6.0-windows\*'
+$sourceDirectory = $PSScriptRoot
 $targetDirectory = Join-Path -Path $env:LOCALAPPDATA -ChildPath 'Programs\DarkCreekWay\DirectoryStructures'
 
 New-Item $targetDirectory -ItemType Directory -Force | Out-Null

@@ -1,0 +1,11 @@
+<Project>
+
+	<!-- Delete Build output - Generated assemblies are empty -->
+	<Target Name="DeleteBinaries" BeforeTargets="AfterBuild">
+		<ItemGroup>
+			<Binaries Include="$(OutDir)*.pdb;$(OutDir)*.dll;$(OutDir)*.json" />
+		</ItemGroup>
+		<Delete Files="@(Binaries)" />
+	</Target>
+	
+</Project>
