@@ -117,7 +117,7 @@ angewendet werden.
 
 ##### Bedienung mit der Maus
 
-* Öffnen Sie das Kontextmenü durch Klicken Sie mit der **rechten Maustaste" auf das Verzeichnis
+* Öffnen Sie das Kontextmenü durch Klicken Sie mit der **rechten Maustaste** auf das Verzeichnis
 * **Nur Windows 11** - Klicken Sie auf den Menüeintrag **Weitere Optionen anzeigen**
 * Wählen Sie das Menü **Verzeichnisstruktur -> Anwenden** durch Bewegen des Zeigers
   über den Eintrag **Verzeichnisstruktur** hin zum Eintrag **Anwenden**.
