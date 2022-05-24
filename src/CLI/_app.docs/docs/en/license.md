@@ -222,15 +222,12 @@ The remaining portions will remain in full force and effect.
 
 Any failure on the part of us to enforce any provision of this agreement will not
 be considered a waiver of our right to enforce such provision.
-Our rights under this agreement will survive any termination of this agreement.
 
-This agreement contains the entire Agreement between the parties hereto with
-respect to the subject matter hereof and supersedes all prior agreements and/or
-understandings (oral or written).
+Our rights under this agreement will survive any termination of this agreement.
 
 ### Amendments
 
-This Agreement may only be modified by a written amendment signed by an
+This agreement may only be modified by a written amendment signed by an
 authorized representative of us.
 
 This agreement supersedes any proposal or prior agreement oral or written,
