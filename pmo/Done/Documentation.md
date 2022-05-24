@@ -5,6 +5,6 @@ to learn about it from a crisp documentation
 
 ## Breakdown
 
-[ ] License
-[ ] Localized readme
-[ ] Localized documentation
+[x] License
+[x] Localized readme
+~~[ ] Localized documentation~~
