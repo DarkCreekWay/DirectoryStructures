@@ -1,7 +1,7 @@
 # User Story - Consolidate global app metdata
 
 As a developer, I have to maintain global app metadata,
-like semantic version, product name, copyright info, company info, etc. 
+like semantic version, product name, copyright info, company info, etc.
 in various places like project files (csproj), build files (.props, .targets),
 as well on code-level for maintaining attributes, constants values, etc.
 
@@ -14,7 +14,7 @@ One approach could be the use of the t4 templating system
 
 ## Breakdown
 
-*[ ] Explore MSBuild inline tasks for generating code
-*[ ] Explore t4 templates for generating code
-*[ ] Identify and define places in code to be automatically maintained
-*[ ] Implement code generation based on exploration results
+* [ ] Explore MSBuild inline tasks for generating code
+* [ ] Explore t4 templates for generating code
+* [ ] Identify and define places in code to be automatically maintained
+* [ ] Implement code generation based on exploration results

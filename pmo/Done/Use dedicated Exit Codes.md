@@ -8,5 +8,5 @@ and well documented exit codes.
 
 ## Breakdown
 
-[ ] Define exit codes as constants
-[ ] Add exit codes to documentation
+* [X] Define exit codes as constants
+* [X] Add exit codes to documentation
