@@ -17,4 +17,4 @@ When the tool got invoked
 *[x] Check, if captured data is missing or empty
 *[x] Show localized message, if missing or empty for contextmenu invocation
 *[x] Exit with non-zero error code, if missing or empty for cli invocation
-*[ ] Update documentation
+*[x] Update documentation

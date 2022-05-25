@@ -110,6 +110,8 @@ angewendet werden.
 
 > Das Werkzeug speichert immer nur eine Struktur.
 > Es wird immer die zuletzt gespeicherte Struktur angewendet.
+>
+> Wenn vor dem Aufruf des Befehls keine Struktur erfasst wurde, wird eine Fehlermeldung angezeigt.
 
 #### Verzeichnisstruktur mit dem Windows Explorer anwenden
 
@@ -358,6 +360,19 @@ ds.exe apply \<Pfad zum Zielverzeichnis\>
 
 ds.exe apply "c:\users\BeispielBenutzer\Verzeichnis Ziel"
 ~~~
+
+### Exit Codes
+
+| Exit Code | Bereich         | Beschreibung                                    |
+|----------:|-----------------|------------------------------------------------ |
+|         0 | Global          | Erfolgreich abgeschlossen                       |
+|         1 | App             | Unzureichende Anzahl von Parametern             |
+|         2 | App             | Befehl ist unbekannt                            |
+|       100 | Allgemein       | Das Verzeichnis existiert nicht                 |
+|       200 | Capture Command | Verzeichnisparameter fehlt                      |
+|       300 | Apply Command   | Verzeichnisparameter fehlt                      |
+|       301 | Apply Command   | Gespeicherte Verzeichnisstruktur nicht gefunden |
+
 
 ---
 

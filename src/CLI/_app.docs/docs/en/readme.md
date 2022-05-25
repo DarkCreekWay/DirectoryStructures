@@ -109,6 +109,8 @@ as often as required.
 
 > The tool always saves only one structure.
 > The last structure saved is always applied.
+>
+> If no structure has been captured before invoking the command an error message gets shown.
 
 #### Apply directory structure with Windows Explorer
 
@@ -351,6 +353,18 @@ ds.exe apply \<path to target directory\>
 
 ds.exe apply "c:\users\exampleuser\target directory"
 ~~~
+
+### Exit Codes
+
+| Exit Code | Scope           | Description                            |
+|----------:|-----------------|----------------------------------------|
+|         0 | Global          | Success                                |
+|         1 | App             | Parameter Count is insufficient        |
+|         2 | App             | Command is unknown                     |
+|       100 | Common          | Directory does not exist               |
+|       200 | Capture Command | Directory Parameter Missing            |
+|       300 | Apply Command   | Directory Parameter Missing            |
+|       301 | Apply Command   | Captured Directory Structure Not Found |
 
 ---
 

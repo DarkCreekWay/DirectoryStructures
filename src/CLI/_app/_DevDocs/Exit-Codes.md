@@ -3,7 +3,7 @@
 | Exit Code | Scope           | Description                            |
 |----------:|-----------------|----------------------------------------|
 |         0 | Global          | Success                                |
-|         1 | App             | Parameter Count is unsufficient        |
+|         1 | App             | Parameter Count is insufficient        |
 |         2 | App             | Command is unknown                     |
 |       100 | Common          | Directory does not exist               |
 |       200 | Capture Command | Directory Parameter Missing            |
