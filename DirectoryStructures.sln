@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLI.config.WinForms", "src\
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CLI.shared", "src\CLI\_app.shared\CLI.shared.shproj", "{7CD424A7-C469-4B42-A9ED-F5C40CA4C478}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLI.Docs", "src\CLI\_app.docs\CLI.Docs.csproj", "{D863D626-3410-49B1-9EF6-2734ED6A4845}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLI.docs", "src\CLI\_app.docs\CLI.docs.csproj", "{D863D626-3410-49B1-9EF6-2734ED6A4845}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CLI.deploy", "src\CLI\_app.deploy\CLI.deploy.csproj", "{A758A0DD-24CF-42AA-8B44-D7D80061E067}"
 EndProject
