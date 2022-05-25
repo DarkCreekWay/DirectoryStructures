@@ -6,13 +6,19 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
 
     static partial class Program {
 
-        static internal void Apply( string basePath ) {
+        static internal void Apply( string basePath , bool useUI = false) {
 
             if( false == Directory.Exists( basePath ) ) {
+
                 Environment.Exit( Constants.s_ExitCode_DirectoryDoesNotExist );
             }
 
             if( false == File.Exists( s_ConfigurationService.CapturedStructuresDefaultPath ) ) {
+
+                if(useUI) {
+                    ShowMessage( Constants.s_L10n_CapturedDirectoryStructureNotFoundCaption, Constants.s_L10n_CapturedDirectoryStructureNotFoundText );
+                }
+
                 Environment.Exit( Constants.s_ExitCode_CapturedDirectoryStructureNotFound );
             }
 

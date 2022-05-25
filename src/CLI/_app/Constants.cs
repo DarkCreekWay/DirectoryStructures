@@ -24,12 +24,15 @@
         // Common Filesystem Error Exit Codes
         internal static int s_ExitCode_DirectoryDoesNotExist              = 100;
 
-        // Capture command Exit Codes
+        // Capture command
         internal static int s_ExitCode_CaptureDirectoryParameterMissing   = 200;
 
         // Apply command
         internal static int s_ExitCode_ApplyDirectoryParameterMissing     = 300;
         internal static int s_ExitCode_CapturedDirectoryStructureNotFound = 301;
+
+        internal static string s_L10n_CapturedDirectoryStructureNotFoundCaption = "ApplyCommand.Messages.CapturedDirectoryStructureNotFound.Caption";
+        internal static string s_L10n_CapturedDirectoryStructureNotFoundText    = "ApplyCommand.Messages.CapturedDirectoryStructureNotFound.Text";
 
     }
 }

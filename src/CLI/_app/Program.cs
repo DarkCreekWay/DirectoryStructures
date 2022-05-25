@@ -1,7 +1,9 @@
-﻿namespace DarkCreekWay.DirectoryStructures.CLI {
+﻿using System.Resources;
+
+namespace DarkCreekWay.DirectoryStructures.CLI {
 
     static partial class Program {
-
+        
         static ConfigurationService s_ConfigurationService;
         // static ResourceAssemblResolver s_ResourceAssemblResolver;
 
@@ -18,6 +20,7 @@
             }
 
             string command = argv[0].ToLowerInvariant();
+            bool useUI = false;
 
             switch( command ) {
 
@@ -38,7 +41,21 @@
                         Environment.Exit( Constants.s_ExitCode_ApplyDirectoryParameterMissing );
                     }
 
-                    Apply( argv[1] );
+                    // Evaluate optional parameters
+
+                    // * --UI:true
+                    //
+                    // The application was invoked from e.g. Windows Explorer ContextMenu
+                    // and indicates to use Dialogs/MessageBox for providing feedback to the user
+
+                    if( argv.Length > 2 ) {
+                        if( argv[2] == Constants.s_UseUILongOption ) {
+                            useUI = true;
+                        }
+                    }
+
+                    Apply( argv[1] , useUI );
+
                     break;
                 }
 
@@ -61,6 +78,23 @@
                     Environment.Exit( Constants.s_ExitCode_CommandIsUnknown);
                     break;
             }
+        }
+
+        static void WriteHelp() {
+            ShowMessage( Constants.s_L10n_HelpCaptionText, Constants.s_L10n_HelpMessageText );
+        }
+
+        static void ShowMessage( string captionResourceKey, string textResourceKey) {
+
+            ResourceManager rm = new ResourceManager( $"{typeof( Program ).Namespace}.{Constants.s_L10n_Namespace}.{Constants.s_L10n_ResourceName}", typeof( Program ).Assembly );
+
+            _ = Application.SetHighDpiMode( HighDpiMode.SystemAware );
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault( false );
+
+            _ = MessageBox.Show( rm.GetString( textResourceKey ), rm.GetString( captionResourceKey ) );
+
         }
     }
 }

@@ -17,5 +17,8 @@
         // Apply command
         public const string s_ApplyCommandName       = "apply";
 
+        // Use UI Option
+        public const string s_UseUILongOption        = "--UI:true";
+
     }
 }

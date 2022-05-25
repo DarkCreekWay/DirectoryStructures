@@ -38,7 +38,7 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
             ResourceManager rm = new ResourceManager( $"{typeof( MicrosoftWindowsIntegrationService ).Namespace}.{Constants.s_L10n_Namespace}.{Constants.s_L10n_ResourceName}", typeof( MicrosoftWindowsIntegrationService ).Assembly );
 
             string captureCommandLine = string.Concat( "\"", executablePath, "\"", " ", Constants.s_CaptureCommandName, " ", "\"%1\"" );
-            string applyCommandLine = string.Concat( "\"", executablePath, "\"", " ", Constants.s_ApplyCommandName, " ", "\"%1\"" );
+            string applyCommandLine = string.Concat( "\"", executablePath, "\"", " ", Constants.s_ApplyCommandName, " ", "\"%1\"" , " ", Constants.s_UseUILongOption );
 
             using( RegistryKey? hkcu = RegistryKey.OpenBaseKey( RegistryHive.CurrentUser, RegistryView.Default ) ) {
 

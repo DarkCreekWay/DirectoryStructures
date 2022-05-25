@@ -13,8 +13,8 @@ When the tool got invoked
 
 ## Breakdown
 
-*[ ] Determine invocation by contextmenu || CLI
-*[ ] Check, if captured data is missing or empty
-*[ ] Show localized message, if missing or empty for contextmenu invocation
-*[ ] Exit with non-zero error code, if missing or empty for cli invocation
+*[x] Determine invocation by contextmenu || CLI
+*[x] Check, if captured data is missing or empty
+*[x] Show localized message, if missing or empty for contextmenu invocation
+*[x] Exit with non-zero error code, if missing or empty for cli invocation
 *[ ] Update documentation
