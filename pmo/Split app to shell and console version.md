@@ -12,4 +12,5 @@ it would be better to split the invocation to 2 different binaries.
 * [ ] Refactor output related code and isolate it by invocation type (shell with UI vs. console)
 * [ ] Create new project CLI.Shell
 * [ ] Refactor code by invocation type (console, shell)
+* [ ] Update Windows Registry code (use new shell project)
 * [ ] Review and update docs (if needed)
