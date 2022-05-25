@@ -3,11 +3,11 @@
     static partial class Program {
 
         static ConfigurationService s_ConfigurationService;
-        static ResourceAssemblResolver s_ResourceAssemblResolver;
+        // static ResourceAssemblResolver s_ResourceAssemblResolver;
 
         static Program() {
 
-            s_ResourceAssemblResolver = new ResourceAssemblResolver();
+            _= new ResourceAssemblResolver();
             s_ConfigurationService = new ConfigurationService();
         }
 

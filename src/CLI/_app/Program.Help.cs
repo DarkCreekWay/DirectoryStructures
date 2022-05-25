@@ -7,11 +7,11 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
 
             ResourceManager rm = new ResourceManager( $"{typeof( Program ).Namespace}.{Constants.s_L10n_Namespace}.{Constants.s_L10n_ResourceName}", typeof( Program ).Assembly );
 
-            Application.SetHighDpiMode( HighDpiMode.SystemAware );
+            _ = Application.SetHighDpiMode( HighDpiMode.SystemAware );
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault( false );
 
-            MessageBox.Show( rm.GetString( Constants.s_L10n_HelpMessageText ), rm.GetString( Constants.s_L10n_HelpCaptionText ) );
+            _ = MessageBox.Show( rm.GetString( Constants.s_L10n_HelpMessageText ), rm.GetString( Constants.s_L10n_HelpCaptionText ) );
         }
     }
 }
