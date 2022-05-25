@@ -8,7 +8,7 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
         [TestMethod]
         public void Capture_TDD() {
 
-            Program.Capture( "C:\\temp" );
+            Commands.Capture( "C:\\temp" );
             //Program.Capture( "z:\\Plex" );
 
         }

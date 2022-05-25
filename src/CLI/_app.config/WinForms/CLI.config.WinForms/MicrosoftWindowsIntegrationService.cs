@@ -21,6 +21,7 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
 
         const string s_VerbBaseRegKeyPath = s_ClassesRegKeyPath + "\\" + s_ProgIdRegKeyName;
 
+        // TODO: Build VerbRegKeyName from Constants
         const string s_VerbRegKeyName = "DarkCreekWay.DirectoryStructures";
         const string s_CaptureVerbRegKeyPath = "shell\\Capture";
         const string s_ApplyVerbRegKeyPath = "shell\\Apply";
@@ -38,7 +39,7 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
             ResourceManager rm = new ResourceManager( $"{typeof( MicrosoftWindowsIntegrationService ).Namespace}.{Constants.s_L10n_Namespace}.{Constants.s_L10n_ResourceName}", typeof( MicrosoftWindowsIntegrationService ).Assembly );
 
             string captureCommandLine = string.Concat( "\"", executablePath, "\"", " ", Constants.s_CaptureCommandName, " ", "\"%1\"" );
-            string applyCommandLine = string.Concat( "\"", executablePath, "\"", " ", Constants.s_ApplyCommandName, " ", "\"%1\"" , " ", Constants.s_UseUILongOption );
+            string applyCommandLine = string.Concat( "\"", executablePath, "\"", " ", Constants.s_ApplyCommandName, " ", "\"%1\"" );
 
             using( RegistryKey? hkcu = RegistryKey.OpenBaseKey( RegistryHive.CurrentUser, RegistryView.Default ) ) {
 
@@ -102,7 +103,7 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
             string? executablePath = Process.GetCurrentProcess().MainModule.FileName;
 #endif
             string basePath = Path.GetDirectoryName( executablePath );
-            return Path.Combine( basePath!, "ds.exe" );
+            return Path.Combine( basePath!, "ds.shell.exe" );
 
         }
     }

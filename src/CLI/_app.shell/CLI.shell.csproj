@@ -1,22 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<OutputType>Exe</OutputType>
+		<OutputType>WinExe</OutputType>
 		<TargetFramework>net6.0-windows</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<AssemblyName>ds</AssemblyName>
+		<AssemblyName>ds.shell</AssemblyName>
 		<NeutralLanguage>en</NeutralLanguage>
+		<UseWindowsForms>True</UseWindowsForms>
 		<RootNamespace>DarkCreekWay.DirectoryStructures.CLI</RootNamespace>
 		<GenerateDependencyFile>false</GenerateDependencyFile>
 	</PropertyGroup>
 
+
 	<ItemGroup>
 		<RuntimeHostConfigurationOption Include="I18n.Directory" Value="l10n" />
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
-		<InternalsVisibleTo Include="ds.mstest" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -24,11 +22,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\_app.lib\CLI.lib.csproj" />
+		<ProjectReference Include="..\_app.lib\CLI.lib.csproj" />
 	</ItemGroup>
 
 	<Import Project="..\.MSBuild\MoveResourceAssemblies.targets" />
-	
 	<Import Project="..\.MSBuild\BundleArtefacts.targets" />
 
 </Project>

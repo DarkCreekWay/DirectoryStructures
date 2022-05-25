@@ -4,9 +4,72 @@ using System.Text;
 
 namespace DarkCreekWay.DirectoryStructures.CLI {
 
-    static partial class Program {
+    public static class Commands {
 
-        static internal void Apply( string basePath , bool useUI = false) {
+        static ConfigurationService s_ConfigurationService;
+
+        static Commands() {
+            s_ConfigurationService = new ConfigurationService();
+        }
+
+        public static Action? OutputHelpAction { get; set; }
+        public static Action<string, string>? OutputMessageAction { get; set; }
+
+        public static void ProcessArgs( string[] argv ) {
+
+            if( argv.Length == 0 ) {
+                Environment.Exit( Constants.s_ExitCode_ParameterCountIsUnsufficient );
+            }
+
+            string command = argv[0].ToLowerInvariant();
+
+            switch( command ) {
+
+                case Constants.s_CaptureCommandName: {
+
+                    if( argv.Length < 2 ) {
+                        Environment.ExitCode = Constants.s_ExitCode_CaptureDirectoryParameterMissing;
+                        Environment.Exit( Constants.s_ExitCode_CaptureDirectoryParameterMissing );
+                    }
+
+                    Capture( argv[1] );
+
+                    break;
+                }
+
+                case Constants.s_ApplyCommandName: {
+
+                    if( argv.Length < 2 ) {
+                        Environment.Exit( Constants.s_ExitCode_ApplyDirectoryParameterMissing );
+                    }
+
+                    Apply( argv[1] );
+
+                    break;
+                }
+
+                case Constants.s_HelpCommandName:
+                case Constants.s_HelpLongOption:
+                case Constants.s_HelpLongQMarkOption:
+                case Constants.s_HelpShortOption:
+                case Constants.s_HelpShortQMarkOption:
+                case Constants.s_HelpLongWindowsOption:
+                case Constants.s_HelpQMarkWindowsOption:
+                case Constants.s_HelpShortWindowsOption: {
+
+                    OutputHelpAction?.Invoke();
+                    Environment.Exit( Constants.s_ExitCode_Success );
+                    break;
+                }
+
+                default:
+                    OutputHelpAction?.Invoke();
+                    Environment.Exit( Constants.s_ExitCode_CommandIsUnknown );
+                    break;
+            }
+        }
+
+        static internal void Apply( string basePath ) {
 
             if( false == Directory.Exists( basePath ) ) {
 
@@ -15,9 +78,7 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
 
             if( false == File.Exists( s_ConfigurationService.CapturedStructuresDefaultPath ) ) {
 
-                if(useUI) {
-                    ShowMessage( Constants.s_L10n_CapturedDirectoryStructureNotFoundCaption, Constants.s_L10n_CapturedDirectoryStructureNotFoundText );
-                }
+                OutputMessageAction?.Invoke( Constants.s_L10n_CapturedDirectoryStructureNotFoundCaption, Constants.s_L10n_CapturedDirectoryStructureNotFoundText );
 
                 Environment.Exit( Constants.s_ExitCode_CapturedDirectoryStructureNotFound );
             }
@@ -36,10 +97,12 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
             }
         }
 
+        
         const int s_StackSize = 8;
 #if POOLING
         const int s_QueueSize = 32;
         const int s_PoolSize = 8;
+
 #endif
 
         static internal void Capture( string rootPath ) {

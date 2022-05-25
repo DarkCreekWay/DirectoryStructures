@@ -7,11 +7,16 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Product>DarkCreekWay's Tool for Directory Structures</Product>
-		<Company>DarkCreekWay</Company>
-		<Authors>DarkCreekWay</Authors>
-		<Copyright>Copyright © DarkCreekWay 2017</Copyright>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<InformationalVersion>2022.05</InformationalVersion>
 	</PropertyGroup>
-	
+
+	<PropertyGroup>
+		<AssemblyTitle>DarkCreekWay's Tool for Directory Structures</AssemblyTitle>
+		<Product>DarkCreekWay's Toolbox</Product>
+		<Copyright>© 2017 DarkCreekWay</Copyright>
+		<Company>DarkCreekWay</Company>
+		<Authors>DarkCreekWay</Authors>
+	</PropertyGroup>
+
 </Project>

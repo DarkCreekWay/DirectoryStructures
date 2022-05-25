@@ -13,7 +13,7 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
             string targetPath = "c:\\temp\\FSTestTarget";
             _ = Directory.CreateDirectory( targetPath );
 
-            Program.Apply( targetPath );
+            Commands.Apply( targetPath );
 
         }
     }

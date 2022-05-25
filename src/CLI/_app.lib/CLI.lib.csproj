@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AssemblyName>ds.lib</AssemblyName>
+		<NeutralLanguage>en</NeutralLanguage>
+		<RootNamespace>DarkCreekWay.DirectoryStructures.CLI</RootNamespace>
+		<GenerateDependencyFile>false</GenerateDependencyFile>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
+		<InternalsVisibleTo Include="ds.mstest" />
+	</ItemGroup>
+
+</Project>

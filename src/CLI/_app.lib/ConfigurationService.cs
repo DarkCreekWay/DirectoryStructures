@@ -1,6 +1,7 @@
 ﻿namespace DarkCreekWay.DirectoryStructures.CLI {
 
-    class ConfigurationService {
+    public class ConfigurationService {
+
         public ConfigurationService() {
 
             UserConfigBasePath = Environment.GetFolderPath( Environment.SpecialFolder.LocalApplicationData );

@@ -16,12 +16,14 @@
         <ApplicationUseCompatibleTextRendering>false</ApplicationUseCompatibleTextRendering>
         <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
     </PropertyGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\_app.lib\CLI.lib.csproj" />
+    </ItemGroup>
 
     <ItemGroup>
         <RuntimeHostConfigurationOption Include="I18n.Directory" Value="l10n" />
     </ItemGroup>
-
-    <Import Project="..\..\..\_app.shared\_app.shared.projitems" Label="Shared" />
-    <Import Project="..\..\..\.MSBuild\MoveResourceAssemblies.targets"/>
-    <Import Project="..\..\..\.MSBuild\BundleArtefacts.targets"/>
+    <Import Project="..\..\..\.MSBuild\MoveResourceAssemblies.targets" />
+    <Import Project="..\..\..\.MSBuild\BundleArtefacts.targets" />
 </Project>

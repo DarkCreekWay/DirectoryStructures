@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\_app\CLI.csproj" />
+    <ProjectReference Include="..\_app.lib\CLI.lib.csproj" />
   </ItemGroup>
 
 </Project>
