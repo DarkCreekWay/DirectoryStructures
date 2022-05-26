@@ -14,4 +14,34 @@
 		<InternalsVisibleTo Include="ds.mstest" />
 	</ItemGroup>
 
+	<!-- Import Code Generation Tasks-->
+	<Import Project=".\..\.MSBuild\GenerateConstantsTask.targets" />
+
+	<!-- Define AutoGenerationMetadata Target-->
+	<Target Name="GenerateConstants">
+		<GenerateConstantsTask
+			IntermediateOutputPath="$(MSBuildProjectDirectory)\$(IntermediateOutputPath)"
+			Namespace="$(RootNamespace)"
+			Copyright="$(Copyright)"
+			GitHubUrl="$(GitHubUrl)"
+		CompanyIdentifier="$(CompanyIdentifier)"
+		ProductIdentifier="$(ProductIdentifier)"
+		ProductAssemblyVersion="$(AssemblyVersion)"
+		ProductInformationalVersion="$(InformationalVersion)"
+		/>
+
+		<!-- Add generated code files to compilation list -->
+		<ItemGroup>
+			<Compile Remove  = "$(IntermediateOutputPath)\Constants.generated.cs" />
+			<Compile Include = "$(IntermediateOutputPath)\Constants.generated.cs" />
+		</ItemGroup>
+
+	</Target>
+
+	<!-- Inject AutoGenerateMetadata Target into compilation chain -->
+	<!-- This ensures generation of code files during design and compile time -->
+	<PropertyGroup>
+		<CoreCompileDependsOn>GenerateConstants;$(CoreCompileDependsOn)</CoreCompileDependsOn>
+	</PropertyGroup>
+	
 </Project>

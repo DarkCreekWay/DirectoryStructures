@@ -7,14 +7,30 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<AssemblyVersion>1.0.1.0</AssemblyVersion>
 		<InformationalVersion>2022.05</InformationalVersion>
+	</PropertyGroup>
+
+	<!-- 
+		Global metadata that gets embeded into code as Constant values
+
+		In addition to the properties defined here, additional properties 
+		from other areas of the project may be embedded as well
+
+		Refer to GenerateConstantsTask.targets and GenerateConstantsTask.cs
+		for details
+	-->
+	
+	<PropertyGroup>
+		<CompanyIdentifier>DarkCreekWay</CompanyIdentifier>
+		<ProductIdentifier>DirectoryStructures</ProductIdentifier>
+		<GitHubUrl>https://github.com/DarkCreekway</GitHubUrl>
 	</PropertyGroup>
 
 	<PropertyGroup>
 		<AssemblyTitle>DarkCreekWay's Tool for Directory Structures</AssemblyTitle>
 		<Product>DarkCreekWay's Toolbox</Product>
-		<Copyright>© 2017 DarkCreekWay</Copyright>
+		<Copyright>© 2017-2022 by DarkCreekWay</Copyright>
 		<Company>DarkCreekWay</Company>
 		<Authors>DarkCreekWay</Authors>
 	</PropertyGroup>
