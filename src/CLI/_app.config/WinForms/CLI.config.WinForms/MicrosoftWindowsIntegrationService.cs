@@ -26,7 +26,7 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
         const string s_CaptureVerbRegKeyPath = "shell\\Capture";
         const string s_ApplyVerbRegKeyPath = "shell\\Apply";
 
-        const string s_L10n_ContextMenuText = "ContextMenu.Text";
+        
 
         [SuppressMessage( "Performance", "CA1822:Mark members as static", Justification = "A future factory shall create this type when run on Windows and so needs to be an instance member" )]
         public void Register() {
@@ -36,7 +36,7 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
                 throw new FileNotFoundException();
             }
 
-            ResourceManager rm = new ResourceManager( $"{typeof( MicrosoftWindowsIntegrationService ).Namespace}.{Constants.s_L10n_Namespace}.{Constants.s_L10n_ResourceName}", typeof( MicrosoftWindowsIntegrationService ).Assembly );
+            ResourceManager rm = new ResourceManager( $"{typeof( Constants ).Namespace}.{Constants.s_L10n_Namespace}.{Constants.s_L10n_ResourceName}", typeof( Constants ).Assembly );
 
             string captureCommandLine = string.Concat( "\"", executablePath, "\"", " ", Constants.s_CaptureCommandName, " ", "\"%1\"" );
             string applyCommandLine = string.Concat( "\"", executablePath, "\"", " ", Constants.s_ApplyCommandName, " ", "\"%1\"" );
@@ -52,7 +52,7 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
                     using( RegistryKey? verb = shell.CreateSubKey( s_VerbRegKeyName, true ) ) {
 
                         verb.SetValue( s_MultiSelectModelRegValName, s_MultiSelectModelRegValData, RegistryValueKind.String );
-                        verb.SetValue( s_MuiVerbRegValName, rm.GetString( s_L10n_ContextMenuText )!, RegistryValueKind.String );
+                        verb.SetValue( s_MuiVerbRegValName, rm.GetString( Constants.s_L10n_ContextMenuText )!, RegistryValueKind.String );
                         verb.SetValue( s_ExtendedSubCommandsKeyRegValName, s_ExtendedSubCommandsKeyRegValData, RegistryValueKind.String );
 
                         using( RegistryKey? apply = verb.CreateSubKey( s_ApplyVerbRegKeyPath, true ) ) {

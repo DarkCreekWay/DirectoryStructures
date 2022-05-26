@@ -24,6 +24,9 @@
         public const string s_L10n_HelpCaptionText = "Help.Caption.Text";
         public const string s_L10n_HelpMessageText = "Help.Message.Text";
 
+        // Context Menu
+        public const string s_L10n_ContextMenuText = "ContextMenu.Text";
+
         // Capture command
         public const string s_CaptureCommandName = "capture";
         public const string s_L10n_CaptureCommandText = "CaptureCommand.Text";

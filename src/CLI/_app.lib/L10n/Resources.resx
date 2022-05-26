@@ -125,6 +125,15 @@
 
 Please capture a directory structure first and try again.</value>
   </data>
+  <data name="ApplyCommand.Text" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="CaptureCommand.Text" xml:space="preserve">
+    <value>Capture</value>
+  </data>
+  <data name="ContextMenu.Text" xml:space="preserve">
+    <value>Directory Structure</value>
+  </data>
   <data name="Help.Caption.Text" xml:space="preserve">
     <value>Directory Structure CLI Help</value>
   </data>

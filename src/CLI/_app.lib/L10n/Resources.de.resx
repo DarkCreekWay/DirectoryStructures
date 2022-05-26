@@ -132,7 +132,7 @@ Bitte speichern Sie zuerst eine Verzeichnisstruktur und versuchen Sie es erneut.
     <value>Speichern</value>
   </data>
   <data name="ContextMenu.Text" xml:space="preserve">
-    <value>Ordnerstruktur</value>
+    <value>Verzeichnisstruktur</value>
   </data>
   <data name="Help.Caption.Text" xml:space="preserve">
     <value>Verzeichnisstruktur CLI Help</value>
