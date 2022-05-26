@@ -73,11 +73,15 @@ times as you like.
 > The tool always captures only one structure.
 > The last structure captured is always applied.
 
+#### Current Limitations & Known issues
+
+**TBD**
+
 #### Capturing a directory structure with Windows Explorer
 
 * Navigate to the directory that contains the desired structure.
 
-##### Mouse operation
+##### Operation with the mouse
 
 * Open the context menu by clicking with the **right mouse button** on the directory.
 * **Windows 11 only** - Click on the **Show more options** menu item.
@@ -111,6 +115,10 @@ as often as required.
 > The last structure saved is always applied.
 >
 > If no structure has been captured before invoking the command an error message gets shown.
+
+#### Current Limitations & Known issues
+
+**TBD**
 
 #### Apply directory structure with Windows Explorer
 
@@ -310,6 +318,10 @@ The following changes are made on the hard disk and in the Windows registry:
 | Registry*   | Added  | HKEY_CLASSES_ROOT\Directory\shell\DarkCreekWay.DirectoryStructures |
 
 > \* Changes to the registry are made through the configuration interface **ds.config.exe**.
+
+#### Current Limitations & Known issues
+
+**TBD** (see sections above)
 
 ### Using the application from the command line
 

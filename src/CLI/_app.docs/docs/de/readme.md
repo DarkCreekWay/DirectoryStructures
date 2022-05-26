@@ -74,6 +74,10 @@ angewendet werden.
 > Das Werkzeug speichert immer nur eine Struktur.
 > Es wird immer die zuletzt gespeicherte Struktur angewendet.
 
+#### Aktuelle Beschränkungen und bekannte Probleme
+
+**TBD**
+
 #### Verzeichnisstruktur mit dem Windows Explorer speichern
 
 * Navigieren Sie zum Verzeichnis, dass die gewünschte Struktur enthält.
@@ -112,6 +116,10 @@ angewendet werden.
 > Es wird immer die zuletzt gespeicherte Struktur angewendet.
 >
 > Wenn vor dem Aufruf des Befehls keine Struktur erfasst wurde, wird eine Fehlermeldung angezeigt.
+
+#### Aktuelle Beschränkungen und bekannte Probleme
+
+**TBD**
 
 #### Verzeichnisstruktur mit dem Windows Explorer anwenden
 
@@ -317,6 +325,10 @@ Daten     | Hinzugefügt | %localappdata%\DarkCreekWay\DirectoryStructures
 Registry* | Hinzugefügt | HKEY_CLASSES_ROOT\Directory\shell\DarkCreekWay.DirectoryStructures
 
 > \* Änderungen an der Registry werden durch die Konfigurationsoberfläche **ds.config.exe** vorgenommen.
+
+#### Aktuelle Beschränkungen und bekannte Probleme
+
+**TBD** (Siehe in den vorhergehenden Abschnitten)
 
 ### Nutzung der Anwendung über die Kommandozeile
 
