@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Win32;
 
@@ -11,8 +11,11 @@ namespace DarkCreekWay.FileStructures.CLI {
         public void Register_TDD() {
 
             using( RegistryKey hkcu = RegistryKey.OpenBaseKey( RegistryHive.CurrentUser, RegistryView.Default ) ) {
+                if( null == hkcu ) throw new NullReferenceException();
 
-                using( RegistryKey shell = hkcu.OpenSubKey( "SOFTWARE\\Classes\\Directory\\shell", true ) ) {
+                using( RegistryKey? shell = hkcu.OpenSubKey( "SOFTWARE\\Classes\\Directory\\shell", true ) ) {
+                    if( null == shell ) throw new NullReferenceException();
+
                     using( RegistryKey verb = shell.CreateSubKey( "DarkCreekWay.FolderStructures", true ) ) {
 
                         verb.SetValue( "MultiSelectModel", "Single", RegistryValueKind.String );
@@ -42,8 +45,9 @@ namespace DarkCreekWay.FileStructures.CLI {
 
             using( RegistryKey hkcu = RegistryKey.OpenBaseKey( RegistryHive.CurrentUser, RegistryView.Default ) ) {
 
-                using( RegistryKey shell = hkcu.OpenSubKey( "SOFTWARE\\Classes\\Directory\\shell", true ) ) {
+                using( RegistryKey? shell = hkcu.OpenSubKey( "SOFTWARE\\Classes\\Directory\\shell", true ) ) {
 
+                    if( null == shell ) throw new NullReferenceException();
                     shell.DeleteSubKeyTree( "DarkCreekWay.FolderStructures", false );
 
                 }

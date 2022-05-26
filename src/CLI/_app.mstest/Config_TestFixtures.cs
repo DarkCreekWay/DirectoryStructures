@@ -34,7 +34,8 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
                 }
             }
 
-            string targetFileName = Path.Combine( Environment.GetEnvironmentVariable( "temp" ), ".default" );
+            string targetFileName = Path.Combine( Environment.GetEnvironmentVariable( "temp" )!, ".default" );
+
             File.Move( tempFileName, targetFileName, true );
             Assert.IsTrue( File.Exists( targetFileName ) );
 
