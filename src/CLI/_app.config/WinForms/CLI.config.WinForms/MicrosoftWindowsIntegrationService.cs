@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Resources;
+
 using Microsoft.Win32;
 
 namespace DarkCreekWay.DirectoryStructures.CLI {
@@ -21,18 +22,16 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
 
         const string s_VerbBaseRegKeyPath = s_ClassesRegKeyPath + "\\" + s_ProgIdRegKeyName;
 
-        // TODO: Build VerbRegKeyName from Constants
-        const string s_VerbRegKeyName = "DarkCreekWay.DirectoryStructures";
+        const string s_VerbRegKeyName = $"{Constants.s_CompanyIdentifier}.{Constants.s_ProductIdentifier}";
         const string s_CaptureVerbRegKeyPath = "shell\\Capture";
         const string s_ApplyVerbRegKeyPath = "shell\\Apply";
-
-        
 
         [SuppressMessage( "Performance", "CA1822:Mark members as static", Justification = "A future factory shall create this type when run on Windows and so needs to be an instance member" )]
         public void Register() {
 
             string executablePath = GetExecutablePath();
-            if(!File.Exists( executablePath) ) {
+
+            if( !File.Exists( executablePath ) ) {
                 throw new FileNotFoundException();
             }
 
@@ -49,27 +48,27 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
                         throw new NullReferenceException();
                     }
 
-                    using( RegistryKey? verb = shell.CreateSubKey( s_VerbRegKeyName, true ) ) {
+                    using( RegistryKey verb = shell.CreateSubKey( s_VerbRegKeyName, true ) ) {
 
                         verb.SetValue( s_MultiSelectModelRegValName, s_MultiSelectModelRegValData, RegistryValueKind.String );
                         verb.SetValue( s_MuiVerbRegValName, rm.GetString( Constants.s_L10n_ContextMenuText )!, RegistryValueKind.String );
                         verb.SetValue( s_ExtendedSubCommandsKeyRegValName, s_ExtendedSubCommandsKeyRegValData, RegistryValueKind.String );
 
-                        using( RegistryKey? apply = verb.CreateSubKey( s_ApplyVerbRegKeyPath, true ) ) {
+                        using( RegistryKey apply = verb.CreateSubKey( s_ApplyVerbRegKeyPath, true ) ) {
 
                             apply.SetValue( s_MuiVerbRegValName, rm.GetString( Constants.s_L10n_ApplyCommandText )!, RegistryValueKind.String );
 
-                            using( RegistryKey? applyCommand = apply.CreateSubKey( s_ShellCommandRegKeyName, true ) ) {
+                            using( RegistryKey applyCommand = apply.CreateSubKey( s_ShellCommandRegKeyName, true ) ) {
 
                                 applyCommand.SetValue( "", applyCommandLine, RegistryValueKind.String );
                             }
                         }
 
-                        using( RegistryKey? capture = verb.CreateSubKey( s_CaptureVerbRegKeyPath, true ) ) {
+                        using( RegistryKey capture = verb.CreateSubKey( s_CaptureVerbRegKeyPath, true ) ) {
 
                             capture.SetValue( s_MuiVerbRegValName, rm.GetString( Constants.s_L10n_CaptureCommandText )!, RegistryValueKind.String );
 
-                            using( RegistryKey? captureCommand = capture.CreateSubKey( s_ShellCommandRegKeyName, true ) ) {
+                            using( RegistryKey captureCommand = capture.CreateSubKey( s_ShellCommandRegKeyName, true ) ) {
 
                                 captureCommand.SetValue( "", captureCommandLine, RegistryValueKind.String );
                             }
@@ -79,7 +78,7 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
             }
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage( "Performance", "CA1822:Mark members as static", Justification = "A future factory shall create this type when run on Windows and needs to be an instance member" )]
+        [SuppressMessage( "Performance", "CA1822:Mark members as static", Justification = "A future factory shall create this type when run on Windows and needs to be an instance member" )]
         public void Unregister() {
 
             using( RegistryKey? hkcu = RegistryKey.OpenBaseKey( RegistryHive.CurrentUser, RegistryView.Default ) ) {
@@ -102,7 +101,9 @@ namespace DarkCreekWay.DirectoryStructures.CLI {
 #else
             string? executablePath = Process.GetCurrentProcess().MainModule.FileName;
 #endif
-            string basePath = Path.GetDirectoryName( executablePath );
+            if( string.IsNullOrEmpty( executablePath ) ) throw new NullReferenceException();
+
+            string? basePath = Path.GetDirectoryName( executablePath );
             return Path.Combine( basePath!, "ds.shell.exe" );
 
         }

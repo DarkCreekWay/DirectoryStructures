@@ -5,9 +5,6 @@
         public const string s_L10n_Namespace = "L10n";
         public const string s_L10n_ResourceName = "Resources";
 
-        public const string s_CompanyDirectoryName = "DarkCreekWay";
-        public const string s_ProductDirectoryName = "DirectoryStructures";
-
         public const string s_CapturedStructuresDirectoryName = "Captured";
         public const string s_DefaultCapturedStructuresFilename = ".default";
 

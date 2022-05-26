@@ -80,6 +80,7 @@ partial class MainForm
             resources.ApplyResources(this._headlineLabel, "_headlineLabel");
             this._headlineLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
             this._headlineLabel.Name = "_headlineLabel";
+            this._headlineLabel.DoubleClick += new System.EventHandler(this.HeadlineLabel_DoubleClick);
             // 
             // _copyrightLabel
             // 
@@ -91,7 +92,7 @@ partial class MainForm
             resources.ApplyResources(this._gitHubProfileLinkLabel, "_gitHubProfileLinkLabel");
             this._gitHubProfileLinkLabel.Name = "_gitHubProfileLinkLabel";
             this._gitHubProfileLinkLabel.TabStop = true;
-            this._gitHubProfileLinkLabel.Tag = "https://github.com/DarkCreekway";
+            this._gitHubProfileLinkLabel.Tag = "";
             this._gitHubProfileLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GitHubProfileLinkLabel_LinkClicked);
             // 
             // _dialogControlsPanel

@@ -13,6 +13,9 @@ public partial class MainForm : Form
         _integrationService = new MicrosoftWindowsIntegrationService();
 
         InitializeComponent();
+
+        _copyrightLabel.Text = Constants.s_Copyright;
+        _gitHubProfileLinkLabel.Tag = Constants.s_GitHubUrl;
     }
 
     void GitHubProfileLinkLabel_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e ) {
@@ -42,5 +45,15 @@ public partial class MainForm : Form
         }
 
         Directory.Delete( _configurationService.AppUserConfigBasePath, true );
+    }
+
+    private void HeadlineLabel_DoubleClick( object sender, EventArgs e ) {
+        _ = MessageBox.Show(
+            this,
+            $"Version {Constants.s_ProductInformationalVersion} ({Constants.s_ProductAssemblyVersion})\r\n" +
+            $"\r\n"+
+            $"{Constants.s_Copyright}",
+            _headlineLabel.Text
+        ) ;
     }
 }

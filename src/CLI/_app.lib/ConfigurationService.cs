@@ -5,7 +5,7 @@
         public ConfigurationService() {
 
             UserConfigBasePath = Environment.GetFolderPath( Environment.SpecialFolder.LocalApplicationData );
-            AppUserConfigBasePath = Path.Combine( UserConfigBasePath, Constants.s_CompanyDirectoryName, Constants.s_ProductDirectoryName );
+            AppUserConfigBasePath = Path.Combine( UserConfigBasePath, Constants.s_CompanyIdentifier, Constants.s_ProductIdentifier );
             CapturedStructuresBasePath = Path.Combine( AppUserConfigBasePath, Constants.s_CapturedStructuresDirectoryName );
             CapturedStructuresDefaultPath = Path.Combine( CapturedStructuresBasePath, Constants.s_DefaultCapturedStructuresFilename );
         }

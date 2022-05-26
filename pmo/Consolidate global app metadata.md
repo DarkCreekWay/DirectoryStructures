@@ -14,7 +14,8 @@ One approach could be the use of the t4 templating system
 
 ## Breakdown
 
-* [ ] Explore MSBuild inline tasks for generating code
-* [ ] Explore t4 templates for generating code
-* [ ] Identify and define places in code to be automatically maintained
-* [ ] Implement code generation based on exploration results
+* [X] Explore MSBuild inline tasks for generating code
+~~* [ ] Explore t4 templates for generating code~~
+* [X] Implement code generation based on exploration results
+* [X] Identify and define places in code to be automatically maintained
+* [X] Update code with generated constants
