@@ -6,5 +6,4 @@ behavior or crashes of the application.
 
 ## Breakdown
 
-* [ ] Evaluate current limitations
-* [ ] Add sections about limitations to docs (localized)
+* [] Add section about limitations to docs (localized)

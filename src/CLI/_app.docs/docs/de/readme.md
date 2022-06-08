@@ -1,6 +1,8 @@
 ﻿
 # DarkCreekway's Werkzeug für Verzeichnisstrukturen
 
+---
+
 ## Einführung
 
 Dateien mit Hilfe von Verzeichnissen zu strukturieren bietet viele Vorteile.
@@ -25,6 +27,8 @@ ist bequem über das Microsoft Windows Explorer Kontextmenü erreichbar.
 
 **Screenshot des Kontextmenüs (Windows 10 Dark Mode)**
 ![Screenshot Kontextmenü Windows 10 Dark Mode](./_assets/images/contextmenu-win10-dark.png)
+
+---
 
 ## Funktionalität
 
@@ -61,6 +65,8 @@ gespeichert und danach auf das Verzeichnis *Ziel* angewendet werden.
 |![Quellstruktur (Struktur)](_assets/images/source-structure-highlighted-win10-dark.png) | ![Zielstruktur (nachher)](_assets/images/target-structure-after-highlighted-win10-dark.png) |
 Struktur unterhalb des Verzeichnisses *Quelle* | Struktur unterhalb des Verzeichnisses *Ziel*
 
+---
+
 ## Funktionen
 
 ### Verzeichnisstruktur speichern
@@ -73,10 +79,6 @@ angewendet werden.
 
 > Das Werkzeug speichert immer nur eine Struktur.
 > Es wird immer die zuletzt gespeicherte Struktur angewendet.
-
-#### Aktuelle Beschränkungen und bekannte Probleme
-
-**TBD**
 
 #### Verzeichnisstruktur mit dem Windows Explorer speichern
 
@@ -116,10 +118,6 @@ angewendet werden.
 > Es wird immer die zuletzt gespeicherte Struktur angewendet.
 >
 > Wenn vor dem Aufruf des Befehls keine Struktur erfasst wurde, wird eine Fehlermeldung angezeigt.
-
-#### Aktuelle Beschränkungen und bekannte Probleme
-
-**TBD**
 
 #### Verzeichnisstruktur mit dem Windows Explorer anwenden
 
@@ -300,6 +298,21 @@ Folgen Sie dazu den Anweisungen im Abschnitt [Konfiguration](#konfiguration)
 
 ---
 
+## Aktuelle Beschränkungen und bekannte Probleme
+
+* Unterstützung langer Pfadnamen
+
+Die Anwendung wurde nicht auf den Umgang der Unterstützung für lange Pfadnamen getestet (Pfadlänge > 260)
+Wenn die maximale Pfadlänge 260 Zeichen überschreitet, ist das Ergebnis nicht bekannt.
+
+* NTFS Zugriffskontrolllisten (ACLs)
+
+Die Anwendung implementiert keine ACL-bezogene Funktionalität.
+Abhängig von den konkreten ACLs kann es vorkommen, dass die Anwendung Verzeichnisstrukturen
+nicht erfassen oder anwenden kann.
+
+---
+
 ## Für IT-Pros'
 
 ### Cheatsheet
@@ -325,10 +338,6 @@ Daten     | Hinzugefügt | %localappdata%\DarkCreekWay\DirectoryStructures
 Registry* | Hinzugefügt | HKEY_CLASSES_ROOT\Directory\shell\DarkCreekWay.DirectoryStructures
 
 > \* Änderungen an der Registry werden durch die Konfigurationsoberfläche **ds.config.exe** vorgenommen.
-
-#### Aktuelle Beschränkungen und bekannte Probleme
-
-**TBD** (Siehe in den vorhergehenden Abschnitten)
 
 ### Nutzung der Anwendung über die Kommandozeile
 

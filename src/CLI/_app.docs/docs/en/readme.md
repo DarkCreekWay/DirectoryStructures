@@ -1,6 +1,8 @@
 ﻿
 # DarkCreekway's Tool for directory structures
 
+---
+
 ## Introduction
 
 Structuring files using directories has many advantages.
@@ -25,6 +27,8 @@ easily accessible via the Microsoft Windows Explorer context menu.
 
 **Screenshot of the context menu (Windows 10 Dark Mode)**
 ![Screenshot context menu Windows 10 Dark Mode](./_assets/images/contextmenu-win10-dark.png)
+
+---
 
 ## Functionality
 
@@ -61,6 +65,8 @@ the tool and then applied it to the *Target* directory.
 | ![Source structure (structure)](_assets/images/source-structure-highlighted-win10-dark.png) | ![Target structure (after)](_assets/images/target-structure-after-highlighted-win10-dark.png) |
 structure below directory *Source* | structure below directory *Target*
 
+---
+
 ## Functions
 
 ### Capture directory structure
@@ -72,10 +78,6 @@ times as you like.
 
 > The tool always captures only one structure.
 > The last structure captured is always applied.
-
-#### Current Limitations & Known issues
-
-**TBD**
 
 #### Capturing a directory structure with Windows Explorer
 
@@ -115,10 +117,6 @@ as often as required.
 > The last structure saved is always applied.
 >
 > If no structure has been captured before invoking the command an error message gets shown.
-
-#### Current Limitations & Known issues
-
-**TBD**
 
 #### Apply directory structure with Windows Explorer
 
@@ -293,6 +291,21 @@ To do this, follow the instructions in the [Configuration](#configuration) secti
 
 ---
 
+## Current Limitations & Known issues
+
+* Long Pathname Support
+
+The application was not tested with Long Pathnames Support (Path length > 260)
+If the maximum path length exceeds 260 chars, the result is not known.
+
+* NTFS Access Control Lists
+
+The application does not implement any ACL related functionality.
+Depending on the concrete ACLs, the application might fail to capture or apply
+directory structures.
+
+---
+
 ## For IT Pros'
 
 ### Cheatsheet
@@ -318,10 +331,6 @@ The following changes are made on the hard disk and in the Windows registry:
 | Registry*   | Added  | HKEY_CLASSES_ROOT\Directory\shell\DarkCreekWay.DirectoryStructures |
 
 > \* Changes to the registry are made through the configuration interface **ds.config.exe**.
-
-#### Current Limitations & Known issues
-
-**TBD** (see sections above)
 
 ### Using the application from the command line
 
