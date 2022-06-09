@@ -283,6 +283,17 @@ und folgen den Installationsanweisungen.
 
 ---
 
+## Download
+
+Die jeweils aktuelle Version finden Sie hier:
+
+| Betriebssystem   | Architektur | .NET Runtime                             | Download                                                                                                                      |
+| ---------------- | ----------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Windows 10       | x86, x64    | .NET 6.0 Desktop Runtime (Voraussetzung) | [Download](https://github.com/DarkCreekWay/DirectoryStructures/releases/download/latest/DCW-DirectoryStructures-net6.0-windows.7z) |
+| Windows 11       | x86, x64    | .NET 6.0 Desktop Runtime (Voraussetzung) | [Download](https://github.com/DarkCreekWay/DirectoryStructures/releases/download/latest/DCW-DirectoryStructures-net6.0-windows.7z) |
+
+---
+
 ## Installation
 
 > Bitte prüfen Sie Ihr System vor der Installation hinsichtlich der [Kompatibilität und Voraussetzungen](#kompatibilität-und-voraussetzungen)

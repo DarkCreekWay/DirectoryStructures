@@ -276,11 +276,20 @@ and follow the installation instructions.
 
 ---
 
+## Download
+
+Please download the latest version here
+
+| Operating System | Architecture | .NET Runtime                            | Download                                                                                                                      |
+| ---------------- | ------------ | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Windows 10       | x86, x64     | .NET 6.0 Desktop Runtime (Prerequisite) | [Download](https://github.com/DarkCreekWay/DirectoryStructures/releases/download/latest/DCW-DirectoryStructures-net6.0-windows.7z) |
+| Windows 11       | x86, x64     | .NET 6.0 Desktop Runtime (Prerequisite) | [Download](https://github.com/DarkCreekWay/DirectoryStructures/releases/download/latest/DCW-DirectoryStructures-net6.0-windows.7z) |
+
 ## Installation
 
 > Please check your system for [Compatibility and requirements](#compatibility-and-requirements) before installation.
 
-* Unzip the 7z file
+* Unzip the downloaded 7z file
 * Execute the **install.ps1** file
   
 > Right-click on the **install.ps1** file
