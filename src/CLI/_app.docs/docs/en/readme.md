@@ -41,10 +41,10 @@ directories as often as desired.
 The structure of the directory *Source* is to be applied to the directory *Target*.
 directory.
 
-|Source|Target|
-|-|-|-|
+| Source                                                                                      | Target                                                                                          |
+|---------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | ![Source structure (structure)](_assets/images/source-structure-highlighted-win10-dark.png) | ![Target structure (before)](_assets/images/target-structure-before-highlighted-win10-dark.png) |
-| directory *Source* with structure | directory *Target* without structure (empty) |
+| directory *Source* with structure                                                           | directory *Target* without structure (empty)                                                    |
 
 To do this, the structure of the directory *Source* must first be captured by
 the tool and then applied it to the *Target* directory.
@@ -60,10 +60,10 @@ the tool and then applied it to the *Target* directory.
 
 ### Result
 
-|Source|Target|
-|-|-|-|
+| Source                                                                                      | Target                                                                                        |
+|---------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | ![Source structure (structure)](_assets/images/source-structure-highlighted-win10-dark.png) | ![Target structure (after)](_assets/images/target-structure-after-highlighted-win10-dark.png) |
-structure below directory *Source* | structure below directory *Target*
+| structure below directory *Source*                                                          | structure below directory *Target*                                                            |
 
 ---
 

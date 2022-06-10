@@ -41,10 +41,10 @@ auf andere Verzeichnisse angewendet werden.
 Die Struktur des Verzeichnisses *Quelle* soll auf das Verzeichnis *Ziel*
 übertragen werden.
 
-|Quelle|Ziel|
-|-|-|-|
+| Quelle                                                                                  | Ziel                                                                                        |
+|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | ![Quellstruktur (Struktur)](_assets/images/source-structure-highlighted-win10-dark.png) | ![Zielstruktur (vorher)](_assets/images/target-structure-before-highlighted-win10-dark.png) |
-| Verzeichnis *Quelle* mit Struktur | Verzeichnis *Ziel* ohne Struktur (leer) |
+| Verzeichnis *Quelle* mit Struktur                                                       | Verzeichnis *Ziel* ohne Struktur (leer)                                                     |
 
 Dazu muss die Struktur des Verzeichnisses *Quelle* zunächst im Werkzeug
 gespeichert und danach auf das Verzeichnis *Ziel* angewendet werden.
@@ -60,10 +60,10 @@ gespeichert und danach auf das Verzeichnis *Ziel* angewendet werden.
 
 ### Ergebnis
 
-|Quelle|Ziel|
-|-|-|-|
-|![Quellstruktur (Struktur)](_assets/images/source-structure-highlighted-win10-dark.png) | ![Zielstruktur (nachher)](_assets/images/target-structure-after-highlighted-win10-dark.png) |
-Struktur unterhalb des Verzeichnisses *Quelle* | Struktur unterhalb des Verzeichnisses *Ziel*
+| Quelle                                                                                  | Ziel                                                                                        |
+|-----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| ![Quellstruktur (Struktur)](_assets/images/source-structure-highlighted-win10-dark.png) | ![Zielstruktur (nachher)](_assets/images/target-structure-after-highlighted-win10-dark.png) |
+| Struktur unterhalb des Verzeichnisses *Quelle*                                          | Struktur unterhalb des Verzeichnisses *Ziel*                                                |
 
 ---
 
@@ -264,11 +264,11 @@ echo %PROCESSOR_ARCHITECTURE%
 
 Ermitteln Sie das richtige Paket für den angezeigten Wert anhand folgender Tabelle
 
-| Ausgabe | Paket    |
-|:-------:|:--------:|
-|   x86   |   x86    |
-|  AMD64  |   x64    |
-|  ARM64  |  Arm64   |
+| Ausgabe | Paket |
+|:-------:|:-----:|
+|   x86   |  x86  |
+|  AMD64  |  x64  |
+|  ARM64  | Arm64 |
 
 Laden Sie die für Ihr System passende .NET 6 **Desktop Runtime** Paket herunter.
 
@@ -287,10 +287,10 @@ und folgen den Installationsanweisungen.
 
 Die jeweils aktuelle Version finden Sie hier:
 
-| Betriebssystem   | Architektur | .NET Runtime                             | Download                                                                                                                      |
-| ---------------- | ----------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Windows 10       | x86, x64    | .NET 6.0 Desktop Runtime (Voraussetzung) | [Download](https://github.com/DarkCreekWay/DirectoryStructures/releases/latest/download/DCW-DirectoryStructures-net6.0-windows.7z) |
-| Windows 11       | x86, x64    | .NET 6.0 Desktop Runtime (Voraussetzung) | [Download](https://github.com/DarkCreekWay/DirectoryStructures/releases/latest/download/DCW-DirectoryStructures-net6.0-windows.7z) |
+| Betriebssystem | Architektur | .NET Runtime                             | Download                                                                                                                           |
+|----------------|-------------|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| Windows 10     | x86, x64    | .NET 6.0 Desktop Runtime (Voraussetzung) | [Download](https://github.com/DarkCreekWay/DirectoryStructures/releases/latest/download/DCW-DirectoryStructures-net6.0-windows.7z) |
+| Windows 11     | x86, x64    | .NET 6.0 Desktop Runtime (Voraussetzung) | [Download](https://github.com/DarkCreekWay/DirectoryStructures/releases/latest/download/DCW-DirectoryStructures-net6.0-windows.7z) |
 
 ---
 
@@ -332,11 +332,11 @@ Installation: **Pro Benutzer**
 
 #### Voraussetzungen
 
-| Komponente     |                         |
-| -------------- | ----------------------- |
-| Betriebssystem | Windows 10 (x86\|x64)   |
-|                | Windows 11 (x86\|x64)   |
-| .NET Runtime   | .NET 6 Desktop Runtime  |
+| Komponente     |                        |
+|----------------|------------------------|
+| Betriebssystem | Windows 10 (x86\|x64)  |
+|                | Windows 11 (x86\|x64)  |
+| .NET Runtime   | .NET 6 Desktop Runtime |
 
 #### Änderungen am System
 
@@ -396,7 +396,7 @@ ds.exe apply "c:\users\BeispielBenutzer\Verzeichnis Ziel"
 ### Exit Codes
 
 | Exit Code | Bereich         | Beschreibung                                    |
-|----------:|-----------------|------------------------------------------------ |
+|----------:|-----------------|-------------------------------------------------|
 |         0 | Global          | Erfolgreich abgeschlossen                       |
 |         1 | App             | Unzureichende Anzahl von Parametern             |
 |         2 | App             | Befehl ist unbekannt                            |
