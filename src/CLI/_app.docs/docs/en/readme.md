@@ -14,8 +14,8 @@ Structuring files using directories has many advantages.
   since with an increasing number of files in a directory,
   many computer systems need longer for the listing.
 
-A proven directory structure to further or new directories to transfer
-is not possible without further ado.
+However, it is not easy to transfer a proven directory structure to additional
+or new directories.
 
 The use of e.g. the **copy & paste** function of the Microsoft Windows
 Explorer is not possible, because not only the structure, but also all files are copied.
