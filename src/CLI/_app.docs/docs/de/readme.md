@@ -316,6 +316,11 @@ Folgen Sie dazu den Anweisungen im Abschnitt [Konfiguration](#konfiguration)
 Die Anwendung wurde nicht auf den Umgang der Unterstützung für lange Pfadnamen getestet (Pfadlänge > 260)
 Wenn die maximale Pfadlänge 260 Zeichen überschreitet, ist das Ergebnis nicht bekannt.
 
+* Verzeichniseigenschaften und -attribute
+
+Die Anwendung bietet keine Unterstützung für die Handhabung von Verzeichniseigenschaften 
+oder -attributen.
+
 * NTFS Zugriffskontrolllisten (ACLs)
 
 Die Anwendung implementiert keine ACL-bezogene Funktionalität.
@@ -404,7 +409,6 @@ ds.exe apply "c:\users\BeispielBenutzer\Verzeichnis Ziel"
 |       200 | Capture Command | Verzeichnisparameter fehlt                      |
 |       300 | Apply Command   | Verzeichnisparameter fehlt                      |
 |       301 | Apply Command   | Gespeicherte Verzeichnisstruktur nicht gefunden |
-
 
 ---
 

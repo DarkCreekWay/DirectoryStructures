@@ -307,6 +307,11 @@ To do this, follow the instructions in the [Configuration](#configuration) secti
 The application was not tested with Long Pathnames Support (Path length > 260)
 If the maximum path length exceeds 260 chars, the result is not known.
 
+* Directory properties and attributes
+
+The application does not implement any support for Directory property or attributes 
+handling.
+
 * NTFS Access Control Lists
 
 The application does not implement any ACL related functionality.
